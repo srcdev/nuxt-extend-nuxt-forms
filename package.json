@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-extend-nuxt-forms",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf .nuxt && rm -rf .output",
+    "reinstall": "rm -rf node_modules && npm install",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/eslint-config": "0.6.1",
+    "eslint": "9.14.0",
+    "@nuxt/icon": "^1.7.2",
+    "nuxt": "^3.14.159",
+    "srcdev-nuxt-forms": "2.1.1",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}
