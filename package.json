@@ -21,6 +21,6 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "srcdev-nuxt-components": "^0.0.3"
+    "srcdev-nuxt-components": "^0.0.4"
   }
 }
