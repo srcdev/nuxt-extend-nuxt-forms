@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf .nuxt && rm -rf .output",
-    "reinstall": "rm -rf node_modules && npm install",
+    "reinstall": "rm -rf node_modules && rm ./package-lock.json && npm install",
+    "cleaninstall": "npm run clean && npm run reinstall",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -13,14 +14,15 @@
   },
   "dependencies": {
     "@nuxt/eslint-config": "0.6.1",
+    "@nuxt/icon": "1.7.5",
     "eslint": "9.14.0",
+    "modern-normalize": "3.0.1",
     "nuxt": "3.14.159",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxt/icon": "1.7.5",
     "srcdev-nuxt-components": "0.0.4",
-    "srcdev-nuxt-forms": "2.1.2"
+    "srcdev-nuxt-forms": "2.1.3"
   }
 }
