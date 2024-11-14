@@ -3,6 +3,8 @@
     <ul class="nav">
       <li><NuxtLink to="/">Home</NuxtLink></li>
       <li><NuxtLink to="/masonry-layout">Masonry Layout</NuxtLink></li>
+      <li><NuxtLink to="/form">Sample form</NuxtLink></li>
+      <li><NuxtLink to="/buttons">Sample buttons</NuxtLink></li>
     </ul>
     <slot name="content"></slot>
   </div>
