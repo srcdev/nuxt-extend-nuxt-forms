@@ -1,10 +1,10 @@
 <template>
   <div class="page-layout">
     <ul class="nav">
-      <li><NuxtLink to="/">Home</NuxtLink></li>
-      <li><NuxtLink to="/masonry-layout">Masonry Layout</NuxtLink></li>
-      <li><NuxtLink to="/form">Sample form</NuxtLink></li>
-      <li><NuxtLink to="/buttons">Sample buttons</NuxtLink></li>
+      <li><NuxtLink to="/" class="link-normal">Home</NuxtLink></li>
+      <li><NuxtLink to="/masonry-layout" class="link-normal">Masonry Layout</NuxtLink></li>
+      <li><NuxtLink to="/form" class="link-normal">Sample form</NuxtLink></li>
+      <li><NuxtLink to="/buttons" class="link-normal">Sample buttons</NuxtLink></li>
     </ul>
     <slot name="content"></slot>
   </div>
@@ -24,7 +24,7 @@ body {
   display: flex;
   gap: 24px;
   padding: 2rem;
-  background-color: #333;
+  background-color: light-dark(#efefef, #333);
   color: white;
   list-style-type: none;
 

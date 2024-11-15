@@ -209,8 +209,6 @@
                       v-model="state.title"
                       v-model:fieldData="titleData"
                       size="normal"
-                      checkbox-style="cross"
-                      checkbox-appearance="with-decorator"
                       optionsLayout="equal-widths"
                       theme="primary"
                     >
@@ -235,8 +233,6 @@
                       v-model="state.cities"
                       v-model:fieldData="citiesData"
                       size="normal"
-                      checkbox-style="cross"
-                      checkbox-appearance="with-decorator"
                       optionsLayout="inline"
                       theme="primary"
                     >
@@ -261,8 +257,6 @@
                       v-model="state.countries"
                       v-model:fieldData="countriesData"
                       size="normal"
-                      checkbox-style="check"
-                      checkbox-appearance="with-decorator"
                       optionsLayout="equal-widths"
                       theme="primary"
                     >
@@ -285,8 +279,6 @@
                       :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.agreed)"
                       v-model="state.agreed"
                       size="normal"
-                      checkbox-style="check"
-                      checkbox-appearance="with-decorator"
                       theme="primary"
                     >
                       <template #description>
@@ -308,8 +300,6 @@
                       :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.agree)"
                       v-model="state.agree"
                       size="normal"
-                      checkbox-style="check"
-                      checkbox-appearance="with-decorator"
                       theme="primary"
                     >
                     </SingleCheckbox>
@@ -327,8 +317,6 @@
                       :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.terms)"
                       v-model="state.terms"
                       size="normal"
-                      checkbox-style="check"
-                      checkbox-appearance="with-decorator"
                       theme="primary"
                     >
                       <template #labelContent>
