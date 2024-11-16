@@ -211,6 +211,36 @@
                       size="normal"
                       optionsLayout="equal-widths"
                       theme="primary"
+                      :stateIcon="{
+                        checked: 'system-uicons:check-circle',
+                        unchecked: 'system-uicons:circle',
+                      }"
+                    >
+                      <template #description>
+                        <p class="label-description">
+                          NOTE: These icons are set in the parent form. See component for default props (`stateIcon`).<br />This is description: optionsLayout = 'equal-widths/inline'
+                        </p>
+                      </template>
+                    </MultipleRadiobuttons>
+                  </template>
+                </FormField>
+
+                <FormField v-if="titleData !== null" width="wide" :has-gutter="false">
+                  <template #default>
+                    <MultipleRadiobuttons
+                      id="title2"
+                      name="title2"
+                      legend="What is your title"
+                      :required="true"
+                      label="Check one"
+                      placeholder="eg. Type something here"
+                      :errorMessage="formErrors?.title2?._errors[0] ?? ''"
+                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.title2)"
+                      v-model="state.title2"
+                      v-model:fieldData="titleData"
+                      size="normal"
+                      optionsLayout="equal-widths"
+                      theme="primary"
                     >
                       <template #description>
                         <p class="label-description">This is description: optionsLayout = 'equal-widths/inline'</p>
@@ -235,9 +265,15 @@
                       size="normal"
                       optionsLayout="inline"
                       theme="primary"
+                      :stateIcon="{
+                        checked: 'system-uicons:checkbox-checked',
+                        unchecked: 'system-uicons:checkbox-empty',
+                      }"
                     >
                       <template #description>
-                        <p class="label-description">This is description: optionsLayout = 'equal-widths'</p>
+                        <p class="label-description">
+                          NOTE: These icons are set in the parent form. See component for default props (`stateIcon`).<br />This is description: optionsLayout = 'equal-widths'
+                        </p>
                       </template>
                     </MultipleCheckboxes>
                   </template>
@@ -461,6 +497,7 @@ const formSchema = reactive(
       cities: z.array(z.string()).min(1, 'Please select at least one city'),
       countries: z.array(z.string()).min(2, 'Please select at least 2 countries').max(5, 'Please select no more than 5 countries'),
       title: z.string().min(1, { message: 'Title is required' }),
+      title2: z.string().min(1, { message: 'Title is required' }),
       agreed: z.boolean().refine((val) => val === true, { message: 'You must tick this box' }),
       agree: z.boolean().refine((val) => val === true, { message: 'You must tick this box' }),
       terms: z.boolean().refine((val) => val === true, {
@@ -478,6 +515,7 @@ const formSchema = reactive(
       cities: true,
       countries: true,
       title: true,
+      title2: true,
       agreed: true,
       agree: true,
       terms: true,
@@ -498,6 +536,7 @@ const state = reactive({
   cities: [],
   countries: [],
   title: '',
+  title2: '',
   agreed: false,
   agree: false,
   terms: false,
