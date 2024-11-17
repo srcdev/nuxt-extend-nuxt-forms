@@ -231,15 +231,12 @@
                       size="normal"
                       optionsLayout="equal-widths"
                       :theme
-                      :stateIcon="{
-                        checked: 'system-uicons:check-circle',
-                        unchecked: 'system-uicons:circle',
-                      }"
                     >
+                      <template #checkedIcon>
+                        <Icon name="material-symbols:check-small" class="input-checked-icon" />
+                      </template>
                       <template #description>
-                        <p class="label-description">
-                          NOTE: These icons are set in the parent form. See component for default props (`stateIcon`).<br />This is description: optionsLayout = 'equal-widths/inline'
-                        </p>
+                        <p class="label-description">NOTE: Custom chefck icon set via slot<br />This is description: optionsLayout = 'equal-widths/inline'</p>
                       </template>
                     </MultipleRadiobuttons>
                   </template>
@@ -285,15 +282,9 @@
                       size="normal"
                       optionsLayout="inline"
                       :theme
-                      :stateIcon="{
-                        checked: 'system-uicons:checkbox-checked',
-                        unchecked: 'system-uicons:checkbox-empty',
-                      }"
                     >
                       <template #description>
-                        <p class="label-description">
-                          NOTE: These icons are set in the parent form. See component for default props (`stateIcon`).<br />This is description: optionsLayout = 'equal-widths'
-                        </p>
+                        <p class="label-description">This is description: optionsLayout = 'equal-widths'</p>
                       </template>
                     </MultipleCheckboxes>
                   </template>
@@ -316,8 +307,11 @@
                       optionsLayout="equal-widths"
                       :theme
                     >
+                      <template #checkedIcon>
+                        <Icon name="material-symbols:circle" class="input-checked-icon" />
+                      </template>
                       <template #description>
-                        <p class="label-description">This is description: optionsLayout = 'inline'</p>
+                        <p class="label-description">NOTE: Custom chefck icon set via slot<br />This is description: optionsLayout = 'inline'</p>
                       </template>
                     </MultipleCheckboxes>
                   </template>
@@ -511,7 +505,7 @@ const formSchema = reactive(
       cities: z.array(z.string()).min(1, 'Please select at least one city'),
       countries: z.array(z.string()).min(2, 'Please select at least 2 countries').max(5, 'Please select no more than 5 countries'),
       title: z.string().min(1, { message: 'Title is required' }),
-      title2: z.string().min(1, { message: 'Title is required' }),
+      otherTitle: z.string().min(1, { message: 'Title is required' }),
       agreed: z.boolean().refine((val) => val === true, { message: 'You must tick this box' }),
       agree: z.boolean().refine((val) => val === true, { message: 'You must tick this box' }),
       terms: z.boolean().refine((val) => val === true, {
@@ -529,7 +523,7 @@ const formSchema = reactive(
       cities: true,
       countries: true,
       title: true,
-      title2: true,
+      otherTitle: true,
       agreed: true,
       agree: true,
       terms: true,
@@ -550,7 +544,7 @@ const state = reactive({
   cities: [],
   countries: [],
   title: '',
-  title2: '',
+  otherTitle: '',
   agreed: false,
   agree: false,
   terms: false,
