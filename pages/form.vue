@@ -236,7 +236,7 @@
                         <Icon name="material-symbols:check-small" class="input-checked-icon" />
                       </template>
                       <template #description>
-                        <p class="label-description">NOTE: Custom chefck icon set via slot<br />This is description: optionsLayout = 'equal-widths/inline'</p>
+                        <p class="label-description">NOTE: Custom checked icon set via slot<br />This is description: optionsLayout = 'equal-widths/inline'</p>
                       </template>
                     </MultipleRadiobuttons>
                   </template>
@@ -311,7 +311,7 @@
                         <Icon name="material-symbols:circle" class="input-checked-icon" />
                       </template>
                       <template #description>
-                        <p class="label-description">NOTE: Custom chefck icon set via slot<br />This is description: optionsLayout = 'inline'</p>
+                        <p class="label-description">NOTE: Custom checked icon set via slot<br />This is description: optionsLayout = 'inline'</p>
                       </template>
                     </MultipleCheckboxes>
                   </template>

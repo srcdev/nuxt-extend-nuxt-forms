@@ -22,7 +22,7 @@
     "@nuxt/eslint-config": "0.7.0",
     "eslint": "9.15.0",
     "srcdev-nuxt-components": "0.0.4",
-    "srcdev-nuxt-forms": "2.1.11",
+    "srcdev-nuxt-forms": "^2.1.12",
     "vue": "3.5.13"
   }
 }
