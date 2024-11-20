@@ -13,16 +13,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "1.7.5",
     "modern-normalize": "3.0.1",
-    "nuxt": "3.14.159",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.7.0",
+    "@nuxt/eslint-config": "0.7.1",
+    "@nuxt/icon": "1.8.2",
     "eslint": "9.15.0",
+    "nuxt": "3.14.1592",
     "srcdev-nuxt-components": "0.0.4",
-    "srcdev-nuxt-forms": "^2.1.12",
+    "srcdev-nuxt-forms": "2.1.13",
     "vue": "3.5.13"
   }
 }
