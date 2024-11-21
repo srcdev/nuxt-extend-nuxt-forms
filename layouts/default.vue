@@ -6,6 +6,9 @@
       <li><NuxtLink to="/form" class="link-normal">Sample form</NuxtLink></li>
       <li><NuxtLink to="/buttons" class="link-normal">Sample buttons</NuxtLink></li>
     </ul>
+    <ul class="nav mbs-20">
+      <li><NuxtLink to="/components/functional/popover" class="link-normal">Popover</NuxtLink></li>
+    </ul>
     <slot name="content"></slot>
   </div>
 </template>
