@@ -2,20 +2,18 @@
   <div>
     <NuxtLayout name="default">
       <template #content>
-        <PageRow :isFullWidth="false">
-          <template #default>
-            <h1>Masonry Layout</h1>
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <h2 class="heading-2">Masonry Layout</h2>
 
-            <MasonryGrid :gridData="quotesData?.quotes.slice(0, qoutesDisplayCount) ?? <IQuotes>{}">
-              <template v-for="(item, index) in quotesData?.quotes.slice(0, qoutesDisplayCount)" v-slot:[item.id]>
-                <div class="">
-                  <p class="">{{ index + 1 }}: {{ item.author }}</p>
-                  <p class="">{{ item.quote }}</p>
-                </div>
-              </template>
-            </MasonryGrid>
-          </template>
-        </PageRow>
+          <MasonryGrid :gridData="quotesData?.quotes.slice(0, qoutesDisplayCount) ?? <IQuotes>{}">
+            <template v-for="(item, index) in quotesData?.quotes.slice(0, qoutesDisplayCount)" v-slot:[item.id]>
+              <div class="">
+                <p class="">{{ index + 1 }}: {{ item.author }}</p>
+                <p class="">{{ item.quote }}</p>
+              </div>
+            </template>
+          </MasonryGrid>
+        </LayoutRow>
       </template>
     </NuxtLayout>
   </div>

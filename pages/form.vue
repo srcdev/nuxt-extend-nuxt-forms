@@ -2,409 +2,407 @@
   <div>
     <NuxtLayout name="default">
       <template #content>
-        <PageRow :isFullWidth="false">
-          <template #default>
-            <h1>Example from extended via NPM package</h1>
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <h2 class="heading-2">Example form extended via NPM package</h2>
 
-            <p>Themes switcher</p>
-            <ul class="flex-group mbe-20">
-              <li>
-                <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('primary')" :is-pending="false" button-text="Primary" theme="primary" size="normal" />
-              </li>
-              <li>
-                <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('secondary')" :is-pending="false" button-text="Secondary" theme="secondary" size="normal" />
-              </li>
-              <li>
-                <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('warning')" :is-pending="false" button-text="Warning" theme="warning" size="normal" />
-              </li>
-              <li>
-                <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('success')" :is-pending="false" button-text="Success" theme="success" size="normal" />
-              </li>
-              <li>
-                <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('error')" :is-pending="false" button-text="Error" theme="error" size="normal" />
-              </li>
-            </ul>
+          <p>Themes switcher</p>
+          <ul class="flex-group mbe-20">
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('primary')" :is-pending="false" button-text="Primary" theme="primary" size="normal" />
+            </li>
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('secondary')" :is-pending="false" button-text="Secondary" theme="secondary" size="normal" />
+            </li>
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('warning')" :is-pending="false" button-text="Warning" theme="warning" size="normal" />
+            </li>
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('success')" :is-pending="false" button-text="Success" theme="success" size="normal" />
+            </li>
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="swapTheme('error')" :is-pending="false" button-text="Error" theme="error" size="normal" />
+            </li>
+          </ul>
 
-            <ClientOnly>
-              <form class="form-wrapper" @submit.stop.prevent="submitForm()">
-                <div aria-live="assertive" id="aria-live-message"></div>
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputTextWithLabel
-                      v-model="state.emailAddress"
-                      type="email"
-                      :maxlength="fieldMaxLength('email')"
-                      id="emailAddress"
-                      name="emailAddress"
-                      placeholder="eg. name@domain.com"
-                      label="Email address"
-                      :errorMessage="formErrors?.emailAddress?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.emailAddress)"
-                      :required="true"
-                      :styleClassPassthrough="['style-1', 'style-2']"
-                      :theme
-                    >
-                      <template #left>
-                        <Icon name="radix-icons:envelope-closed" class="icon" />
-                      </template>
-                    </InputTextWithLabel>
-                  </template>
-                </FormField>
+          <ClientOnly>
+            <form class="form-wrapper" @submit.stop.prevent="submitForm()">
+              <div aria-live="assertive" id="aria-live-message"></div>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputTextWithLabel
+                    v-model="state.emailAddress"
+                    type="email"
+                    :maxlength="fieldMaxLength('email')"
+                    id="emailAddress"
+                    name="emailAddress"
+                    placeholder="eg. name@domain.com"
+                    label="Email address"
+                    :errorMessage="formErrors?.emailAddress?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.emailAddress)"
+                    :required="true"
+                    :styleClassPassthrough="['style-1', 'style-2']"
+                    :theme
+                  >
+                    <template #left>
+                      <Icon name="radix-icons:envelope-closed" class="icon" />
+                    </template>
+                  </InputTextWithLabel>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputTextWithLabel
-                      v-model="state.username"
-                      type="text"
-                      :maxlength="fieldMaxLength('username')"
-                      id="username"
-                      name="username"
-                      placeholder="eg. name@domain.com"
-                      label="Username"
-                      :errorMessage="formErrors?.username?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.username)"
-                      :required="true"
-                      :styleClassPassthrough="['style-1', 'style-2']"
-                      :theme
-                    >
-                      <template #left>
-                        <Icon name="radix-icons:person" class="icon" />
-                      </template>
-                    </InputTextWithLabel>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputTextWithLabel
+                    v-model="state.username"
+                    type="text"
+                    :maxlength="fieldMaxLength('username')"
+                    id="username"
+                    name="username"
+                    placeholder="eg. name@domain.com"
+                    label="Username"
+                    :errorMessage="formErrors?.username?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.username)"
+                    :required="true"
+                    :styleClassPassthrough="['style-1', 'style-2']"
+                    :theme
+                  >
+                    <template #left>
+                      <Icon name="radix-icons:person" class="icon" />
+                    </template>
+                  </InputTextWithLabel>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputPasswordWithLabel
-                      v-model="state.password"
-                      :maxlength="fieldMaxLength('password')"
-                      id="password"
-                      name="password"
-                      placeholder="eg. a mixure of numbers and letters"
-                      label="Password"
-                      :errorMessage="formErrors?.password?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.password)"
-                      :required="true"
-                      :styleClassPassthrough="['style-1', 'style-2']"
-                      :theme
-                    >
-                      <template #right>
-                        <Icon name="radix-icons:eye-open" class="icon" />
-                      </template>
-                    </InputPasswordWithLabel>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputPasswordWithLabel
+                    v-model="state.password"
+                    :maxlength="fieldMaxLength('password')"
+                    id="password"
+                    name="password"
+                    placeholder="eg. a mixure of numbers and letters"
+                    label="Password"
+                    :errorMessage="formErrors?.password?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.password)"
+                    :required="true"
+                    :styleClassPassthrough="['style-1', 'style-2']"
+                    :theme
+                  >
+                    <template #right>
+                      <Icon name="radix-icons:eye-open" class="icon" />
+                    </template>
+                  </InputPasswordWithLabel>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputTextareaWithLabel
-                      v-model="state.message"
-                      :maxlength="fieldMaxLength('message')"
-                      id="message"
-                      name="message"
-                      placeholder="Type your message here"
-                      label="Your mesage"
-                      :errorMessage="formErrors?.message?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.message)"
-                      :required="true"
-                      :styleClassPassthrough="['style-1', 'style-2']"
-                      :theme
-                    >
-                    </InputTextareaWithLabel>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputTextareaWithLabel
+                    v-model="state.message"
+                    :maxlength="fieldMaxLength('message')"
+                    id="message"
+                    name="message"
+                    placeholder="Type your message here"
+                    label="Your mesage"
+                    :errorMessage="formErrors?.message?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.message)"
+                    :required="true"
+                    :styleClassPassthrough="['style-1', 'style-2']"
+                    :theme
+                  >
+                  </InputTextareaWithLabel>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputTextAsNumberWithLabel
-                      v-model.number="state.count2"
-                      :maxlength="fieldMaxLength('count2')"
-                      :min="25"
-                      :max="75"
-                      :step="5"
-                      id="count2"
-                      name="count2"
-                      placeholder="eg. 10"
-                      label="How many things? Between 25 & 75"
-                      :errorMessage="formErrors?.count2?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.count2)"
-                      :required="true"
-                      :styleClassPassthrough="['style-1', 'style-2']"
-                      :theme
-                    >
-                      <template #description>
-                        <p class="label-description">Input type="text" inputmode="numeric"</p>
-                      </template>
-                      <template #left>
-                        <Icon name="gridicons:minus-small" class="icon" />
-                      </template>
-                      <template #right>
-                        <Icon name="gridicons:plus-small" class="icon" />
-                      </template>
-                    </InputTextAsNumberWithLabel>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputTextAsNumberWithLabel
+                    v-model.number="state.count2"
+                    :maxlength="fieldMaxLength('count2')"
+                    :min="25"
+                    :max="75"
+                    :step="5"
+                    id="count2"
+                    name="count2"
+                    placeholder="eg. 10"
+                    label="How many things? Between 25 & 75"
+                    :errorMessage="formErrors?.count2?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.count2)"
+                    :required="true"
+                    :styleClassPassthrough="['style-1', 'style-2']"
+                    :theme
+                  >
+                    <template #description>
+                      <p class="label-description">Input type="text" inputmode="numeric"</p>
+                    </template>
+                    <template #left>
+                      <Icon name="gridicons:minus-small" class="icon" />
+                    </template>
+                    <template #right>
+                      <Icon name="gridicons:plus-small" class="icon" />
+                    </template>
+                  </InputTextAsNumberWithLabel>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputNumberDefault
-                      id="count"
-                      name="count"
-                      label="How many things? Between 25 & 75 , step 5"
-                      :min="25"
-                      :max="75"
-                      :step="5"
-                      placeholder="eg. What\'s your count?"
-                      :errorMessage="formErrors?.count?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.count)"
-                      :required="true"
-                      :styleClassPassthrough="['count-1', 'count-2']"
-                      v-model.number="state.count"
-                      :theme
-                    >
-                      <template #description>
-                        <p class="label-description">Input type="number" inputmode="numeric"</p>
-                      </template>
-                      <template #left>
-                        <Icon name="gridicons:minus-small" class="icon" />
-                      </template>
-                      <template #right>
-                        <Icon name="gridicons:plus-small" class="icon" />
-                      </template>
-                    </InputNumberDefault>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputNumberDefault
+                    id="count"
+                    name="count"
+                    label="How many things? Between 25 & 75 , step 5"
+                    :min="25"
+                    :max="75"
+                    :step="5"
+                    placeholder="eg. What\'s your count?"
+                    :errorMessage="formErrors?.count?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.count)"
+                    :required="true"
+                    :styleClassPassthrough="['count-1', 'count-2']"
+                    v-model.number="state.count"
+                    :theme
+                  >
+                    <template #description>
+                      <p class="label-description">Input type="number" inputmode="numeric"</p>
+                    </template>
+                    <template #left>
+                      <Icon name="gridicons:minus-small" class="icon" />
+                    </template>
+                    <template #right>
+                      <Icon name="gridicons:plus-small" class="icon" />
+                    </template>
+                  </InputNumberDefault>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputRangeDefault
-                      id="score"
-                      name="score"
-                      label="Score between 0 & 100"
-                      :min="0"
-                      :max="100"
-                      :step="10"
-                      placeholder="eg. What\'s your score?"
-                      :errorMessage="formErrors?.score?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.score)"
-                      :required="true"
-                      :styleClassPassthrough="['style-1', 'style-2']"
-                      v-model.number="state.score"
-                      :theme
-                    >
-                      <template #description>
-                        <p class="label-description">This is a description of what the user is required to do</p>
-                      </template>
-                      <template #datalist>
-                        <datalist class="input-range-datalist" id="score-datalist">
-                          <option value="0" label="Rubbish!"></option>
-                          <option value="25" label="Below par"></option>
-                          <option value="50" label="Average"></option>
-                          <option value="75" label="Quite good"></option>
-                          <option value="100" label="Excellent"></option>
-                        </datalist>
-                      </template>
-                      <template #left>
-                        <Icon name="gridicons:minus-small" class="icon" />
-                      </template>
-                      <template #right>
-                        <Icon name="gridicons:plus-small" class="icon" />
-                      </template>
-                    </InputRangeDefault>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputRangeDefault
+                    id="score"
+                    name="score"
+                    label="Score between 0 & 100"
+                    :min="0"
+                    :max="100"
+                    :step="10"
+                    placeholder="eg. What\'s your score?"
+                    :errorMessage="formErrors?.score?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.score)"
+                    :required="true"
+                    :styleClassPassthrough="['style-1', 'style-2']"
+                    v-model.number="state.score"
+                    :theme
+                  >
+                    <template #description>
+                      <p class="label-description">This is a description of what the user is required to do</p>
+                    </template>
+                    <template #datalist>
+                      <datalist class="input-range-datalist" id="score-datalist">
+                        <option value="0" label="Rubbish!"></option>
+                        <option value="25" label="Below par"></option>
+                        <option value="50" label="Average"></option>
+                        <option value="75" label="Quite good"></option>
+                        <option value="100" label="Excellent"></option>
+                      </datalist>
+                    </template>
+                    <template #left>
+                      <Icon name="gridicons:minus-small" class="icon" />
+                    </template>
+                    <template #right>
+                      <Icon name="gridicons:plus-small" class="icon" />
+                    </template>
+                  </InputRangeDefault>
+                </template>
+              </FormField>
 
-                <FormField v-if="titleData !== null" width="wide" :has-gutter="false">
-                  <template #default>
-                    <MultipleRadiobuttons
-                      id="title"
-                      name="title"
-                      legend="What is your title"
-                      :required="true"
-                      label="Check one"
-                      placeholder="eg. Type something here"
-                      :errorMessage="formErrors?.title?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.title)"
-                      v-model="state.title"
-                      v-model:fieldData="titleData"
-                      size="normal"
-                      optionsLayout="equal-widths"
-                      :theme
-                    >
-                      <template #checkedIcon>
-                        <Icon name="material-symbols:check-small" class="input-checked-icon" />
-                      </template>
-                      <template #description>
-                        <p class="label-description">NOTE: Custom checked icon set via slot<br />This is description: optionsLayout = 'equal-widths/inline'</p>
-                      </template>
-                    </MultipleRadiobuttons>
-                  </template>
-                </FormField>
+              <FormField v-if="titleData !== null" width="wide" :has-gutter="false">
+                <template #default>
+                  <MultipleRadiobuttons
+                    id="title"
+                    name="title"
+                    legend="What is your title"
+                    :required="true"
+                    label="Check one"
+                    placeholder="eg. Type something here"
+                    :errorMessage="formErrors?.title?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.title)"
+                    v-model="state.title"
+                    v-model:fieldData="titleData"
+                    size="normal"
+                    optionsLayout="equal-widths"
+                    :theme
+                  >
+                    <template #checkedIcon>
+                      <Icon name="material-symbols:check-small" class="input-checked-icon" />
+                    </template>
+                    <template #description>
+                      <p class="label-description">NOTE: Custom checked icon set via slot<br />This is description: optionsLayout = 'equal-widths/inline'</p>
+                    </template>
+                  </MultipleRadiobuttons>
+                </template>
+              </FormField>
 
-                <FormField v-if="titleData !== null" width="wide" :has-gutter="false">
-                  <template #default>
-                    <MultipleRadiobuttons
-                      id="otherTitle"
-                      name="otherTitle"
-                      legend="What is your title"
-                      :required="true"
-                      label="Check one"
-                      placeholder="eg. Type something here"
-                      :errorMessage="formErrors?.otherTitle?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.otherTitle)"
-                      v-model="state.otherTitle"
-                      v-model:fieldData="titleData"
-                      size="normal"
-                      optionsLayout="equal-widths"
-                      :theme
-                    >
-                      <template #description>
-                        <p class="label-description">This is description: optionsLayout = 'equal-widths/inline'</p>
-                      </template>
-                    </MultipleRadiobuttons>
-                  </template>
-                </FormField>
+              <FormField v-if="titleData !== null" width="wide" :has-gutter="false">
+                <template #default>
+                  <MultipleRadiobuttons
+                    id="otherTitle"
+                    name="otherTitle"
+                    legend="What is your title"
+                    :required="true"
+                    label="Check one"
+                    placeholder="eg. Type something here"
+                    :errorMessage="formErrors?.otherTitle?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.otherTitle)"
+                    v-model="state.otherTitle"
+                    v-model:fieldData="titleData"
+                    size="normal"
+                    optionsLayout="equal-widths"
+                    :theme
+                  >
+                    <template #description>
+                      <p class="label-description">This is description: optionsLayout = 'equal-widths/inline'</p>
+                    </template>
+                  </MultipleRadiobuttons>
+                </template>
+              </FormField>
 
-                <FormField v-if="citiesData !== null" width="wide" :has-gutter="false">
-                  <template #default>
-                    <MultipleCheckboxes
-                      id="cities"
-                      name="cities"
-                      legend="Choose a location"
-                      :required="true"
-                      label="Check all Cities you like"
-                      placeholder="eg. Type something here"
-                      :errorMessage="formErrors?.cities?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.cities)"
-                      v-model="state.cities"
-                      v-model:fieldData="citiesData"
-                      size="normal"
-                      optionsLayout="inline"
-                      :theme
-                    >
-                      <template #description>
-                        <p class="label-description">This is description: optionsLayout = 'equal-widths'</p>
-                      </template>
-                    </MultipleCheckboxes>
-                  </template>
-                </FormField>
+              <FormField v-if="citiesData !== null" width="wide" :has-gutter="false">
+                <template #default>
+                  <MultipleCheckboxes
+                    id="cities"
+                    name="cities"
+                    legend="Choose a location"
+                    :required="true"
+                    label="Check all Cities you like"
+                    placeholder="eg. Type something here"
+                    :errorMessage="formErrors?.cities?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.cities)"
+                    v-model="state.cities"
+                    v-model:fieldData="citiesData"
+                    size="normal"
+                    optionsLayout="inline"
+                    :theme
+                  >
+                    <template #description>
+                      <p class="label-description">This is description: optionsLayout = 'equal-widths'</p>
+                    </template>
+                  </MultipleCheckboxes>
+                </template>
+              </FormField>
 
-                <FormField v-if="countriesData !== null" width="wide" :has-gutter="false">
-                  <template #default>
-                    <MultipleCheckboxes
-                      id="countries"
-                      name="countries"
-                      legend="Choose a country"
-                      :required="true"
-                      label="Check all Countries you like"
-                      placeholder="eg. Type something here"
-                      :errorMessage="formErrors?.countries?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.countries)"
-                      v-model="state.countries"
-                      v-model:fieldData="countriesData"
-                      size="normal"
-                      optionsLayout="equal-widths"
-                      :theme
-                    >
-                      <template #checkedIcon>
-                        <Icon name="material-symbols:circle" class="input-checked-icon" />
-                      </template>
-                      <template #description>
-                        <p class="label-description">NOTE: Custom checked icon set via slot<br />This is description: optionsLayout = 'inline'</p>
-                      </template>
-                    </MultipleCheckboxes>
-                  </template>
-                </FormField>
+              <FormField v-if="countriesData !== null" width="wide" :has-gutter="false">
+                <template #default>
+                  <MultipleCheckboxes
+                    id="countries"
+                    name="countries"
+                    legend="Choose a country"
+                    :required="true"
+                    label="Check all Countries you like"
+                    placeholder="eg. Type something here"
+                    :errorMessage="formErrors?.countries?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.countries)"
+                    v-model="state.countries"
+                    v-model:fieldData="countriesData"
+                    size="normal"
+                    optionsLayout="equal-widths"
+                    :theme
+                  >
+                    <template #checkedIcon>
+                      <Icon name="material-symbols:circle" class="input-checked-icon" />
+                    </template>
+                    <template #description>
+                      <p class="label-description">NOTE: Custom checked icon set via slot<br />This is description: optionsLayout = 'inline'</p>
+                    </template>
+                  </MultipleCheckboxes>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <SingleCheckbox
-                      id="agreed"
-                      name="agreed"
-                      legend="I agree (label with description)"
-                      label="Click to agree to something"
-                      :required="true"
-                      :errorMessage="formErrors?.agreed?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.agreed)"
-                      v-model="state.agreed"
-                      size="normal"
-                      :theme
-                    >
-                      <template #description>
-                        <p class="label-description">You must <strong>agree</strong> to continue</p>
-                      </template>
-                    </SingleCheckbox>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <SingleCheckbox
+                    id="agreed"
+                    name="agreed"
+                    legend="I agree (label with description)"
+                    label="Click to agree to something"
+                    :required="true"
+                    :errorMessage="formErrors?.agreed?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.agreed)"
+                    v-model="state.agreed"
+                    size="normal"
+                    :theme
+                  >
+                    <template #description>
+                      <p class="label-description">You must <strong>agree</strong> to continue</p>
+                    </template>
+                  </SingleCheckbox>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <SingleCheckbox
-                      id="agree"
-                      name="agree"
-                      legend="I agree (label no description)"
-                      label="Click to agree to something"
-                      :required="true"
-                      :errorMessage="formErrors?.agree?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.agree)"
-                      v-model="state.agree"
-                      size="normal"
-                      :theme
-                    >
-                    </SingleCheckbox>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <SingleCheckbox
+                    id="agree"
+                    name="agree"
+                    legend="I agree (label no description)"
+                    label="Click to agree to something"
+                    :required="true"
+                    :errorMessage="formErrors?.agree?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.agree)"
+                    v-model="state.agree"
+                    size="normal"
+                    :theme
+                  >
+                  </SingleCheckbox>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <SingleCheckbox
-                      id="terms"
-                      name="terms"
-                      legend="Terms and conditions"
-                      :required="true"
-                      :errorMessage="formErrors?.terms?._errors[0] ?? ''"
-                      :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.terms)"
-                      v-model="state.terms"
-                      size="normal"
-                      :theme
-                    >
-                      <template #labelContent>
-                        <span class="body-normal">You must agree to our <NuxtLink to="/" class="link-normal">terms and conditions</NuxtLink> to continue</span>
-                      </template>
-                    </SingleCheckbox>
-                  </template>
-                </FormField>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <SingleCheckbox
+                    id="terms"
+                    name="terms"
+                    legend="Terms and conditions"
+                    :required="true"
+                    :errorMessage="formErrors?.terms?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.terms)"
+                    v-model="state.terms"
+                    size="normal"
+                    :theme
+                  >
+                    <template #labelContent>
+                      <span class="body-normal">You must agree to our <NuxtLink to="/" class="link-normal">terms and conditions</NuxtLink> to continue</span>
+                    </template>
+                  </SingleCheckbox>
+                </template>
+              </FormField>
 
-                <FormField width="wide" :has-gutter="false">
-                  <template #default>
-                    <InputButtonSubmit type="button" @click.stop.prevent="submitForm()" :is-pending="false" :readonly="zodFormControl.submitDisabled" button-text="Submit" :theme size="medium" />
-                  </template>
-                </FormField>
-              </form>
-            </ClientOnly>
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <InputButtonSubmit type="button" @click.stop.prevent="submitForm()" :is-pending="false" :readonly="zodFormControl.submitDisabled" button-text="Submit" :theme size="medium" />
+                </template>
+              </FormField>
+            </form>
+          </ClientOnly>
 
-            <h2>Form data</h2>
-            <ClientOnly>
-              <p>Client only state</p>
-              <pre>
+          <h2>Form data</h2>
+          <ClientOnly>
+            <p>Client only state</p>
+            <pre>
             {{ state }}
           </pre
-              >
-              <p>Client only zodFormControl</p>
-              <pre>
+            >
+            <p>Client only zodFormControl</p>
+            <pre>
             {{ zodFormControl }}
           </pre
-              >
-              <p>Client only formErrors</p>
+            >
+            <p>Client only formErrors</p>
 
-              <pre>
+            <pre>
             {{ formErrors }}
           </pre
-              >
-            </ClientOnly>
-          </template>
-        </PageRow>
+            >
+          </ClientOnly>
+        </LayoutRow>
       </template>
     </NuxtLayout>
   </div>

@@ -2,11 +2,9 @@
   <div>
     <NuxtLayout name="default">
       <template #content>
-        <PageRow :isFullWidth="false">
-          <template #default>
-            <h1>Examples extended via NPM package</h1>
-          </template>
-        </PageRow>
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <h2 class="heading-2">Examples extended via NPM package</h2>
+        </LayoutRow>
       </template>
     </NuxtLayout>
   </div>
