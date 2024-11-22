@@ -71,10 +71,6 @@
             luctus enim habitant porta pretium litora. Parturient montes imperdiet massa; sollicitudin varius hac aptent. Eleifend parturient mattis tellus nisi a montes.
           </p>
         </LayoutRow>
-
-        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
-          <h2 class="heading-2">Full Width</h2>
-        </LayoutRow>
       </template>
     </NuxtLayout>
   </div>
@@ -89,7 +85,19 @@ useHead({
   title: 'UI Layout Row',
   meta: [{ name: 'description', content: 'Examples of UI Component Layout Row' }],
   bodyAttrs: {
-    class: 'home',
+    class: 'layout-row-example',
   },
 });
 </script>
+
+<style lang="css">
+.layout-row-example {
+  .layout-row {
+    outline: 1px solid red;
+
+    .layout-row-inner {
+      outline: 1px solid blue;
+    }
+  }
+}
+</style>
