@@ -9,7 +9,7 @@
           </p>
           <div style="text-align: center">
             <h1>PopOver component 1</h1>
-            <PopOver popovertarget="profile1">
+            <PopOver popovertarget="profile1" :styleClassPassthrough="['popover-1']">
               <template #trigger>
                 <img class="profile-image" src="https://ui-avatars.com/api/name=1?background=0A8A0A&color=fff" alt="" />
               </template>
@@ -22,7 +22,7 @@
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
           <div style="text-align: center">
             <h1>PopOver component 2</h1>
-            <PopOver popovertarget="profile2">
+            <PopOver popovertarget="profile2" :styleClassPassthrough="['popover-2']">
               <template #trigger>
                 <img class="profile-image" src="https://ui-avatars.com/api/name=2?background=0A8A0A&color=fff" alt="" />
               </template>
@@ -58,3 +58,17 @@ const anchorNameSupported = computed(() => {
   return import.meta.client && !('anchorName' in document.documentElement.style);
 });
 </script>
+
+<style lang="css">
+dialog {
+  &.popover-1 {
+    width: 200px;
+    height: 300px;
+    /* background-color: #fff; */
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
+</style>
