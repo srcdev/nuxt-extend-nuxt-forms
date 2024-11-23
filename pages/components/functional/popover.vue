@@ -62,8 +62,8 @@ const anchorNameSupported = computed(() => {
 <style lang="css">
 dialog {
   &.popover-1 {
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
     /* background-color: #fff; */
     border: 1px solid #fff;
     border-radius: 10px;
