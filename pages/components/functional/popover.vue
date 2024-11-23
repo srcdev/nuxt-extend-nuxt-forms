@@ -4,6 +4,9 @@
       <template #content>
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
           <h2 class="heading-2">Popover</h2>
+          <p class="body-normal">
+            "anchorName" Supported <span class="body-normal-semibold">{{ anchorNameSupported }}</span>
+          </p>
           <div style="text-align: center">
             <h1>PopOver component 1</h1>
             <PopOver popovertarget="profile1">
@@ -49,5 +52,9 @@ useHead({
   bodyAttrs: {
     class: 'home',
   },
+});
+
+const anchorNameSupported = computed(() => {
+  return import.meta.client && !('anchorName' in document.documentElement.style);
 });
 </script>
