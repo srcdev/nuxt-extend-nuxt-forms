@@ -7,6 +7,7 @@
       <li><NuxtLink to="/buttons" class="link-normal">Sample buttons</NuxtLink></li>
     </ul>
     <ul class="nav mbs-20">
+      <li><NuxtLink to="/components/functional/dialog" class="link-normal">Dialog</NuxtLink></li>
       <li><NuxtLink to="/components/functional/popover" class="link-normal">Popover</NuxtLink></li>
       <li><NuxtLink to="/components/ui/layout-row" class="link-normal">Layout Row</NuxtLink></li>
     </ul>
