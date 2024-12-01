@@ -20,6 +20,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['modern-normalize', './assets/styles/index.css'],
-  modules: ['@nuxt/icon'],
+  modules: ['@nuxt/icon', '@nuxtjs/storybook'],
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
 });

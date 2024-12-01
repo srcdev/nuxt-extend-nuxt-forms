@@ -1,4 +1,4 @@
-import { createError } from "h3";
+import { createError } from 'h3';
 
 export default defineEventHandler(async (event: any) => {
   const body = await readBody<{ emailAddress: string; password: string; username: string }>(event);
@@ -7,13 +7,13 @@ export default defineEventHandler(async (event: any) => {
 
   let throwError = false;
 
-  if (emailAddress === "test@test.com") {
+  if (emailAddress === 'test@test.com') {
     throwError = true;
   }
 
   const response = {
     status: 200,
-    statusText: "success"
+    statusText: 'success',
   };
 
   // set some other response status cde
@@ -23,14 +23,14 @@ export default defineEventHandler(async (event: any) => {
   if (throwError) {
     throw createError({
       statusCode: 400,
-      statusMessage: "error",
+      statusMessage: 'error',
       data: {
         errors: {
-          emailAddress: "Email address already registered",
-          username: "Username already registered",
-          password: ["Password is too weak", "Password is too short"]
-        }
-      }
+          emailAddress: 'Email address already registered',
+          username: 'Username already registered',
+          password: ['Password is too weak', 'Password is too short'],
+        },
+      },
     });
   }
   return response;

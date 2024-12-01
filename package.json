@@ -10,20 +10,32 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "storybook": "storybook dev --port 6006 --config-dir .storybook",
+    "test": "vitest"
   },
   "dependencies": {
     "@oddbird/css-anchor-positioning": "^0.4.0",
-    "modern-normalize": "3.0.1",
-    "vue-router": "latest"
+    "modern-normalize": "3.0.1"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.7.1",
-    "@nuxt/icon": "1.8.2",
-    "eslint": "9.15.0",
+    "@nuxt/eslint-config": "0.7.2",
+    "@nuxt/icon": "1.9.0",
+    "@nuxt/test-utils": "3.14.4",
+    "@nuxtjs/storybook": "8.3.2",
+    "@storybook/addon-essentials": "8.4.6",
+    "@storybook/addon-interactions": "8.4.6",
+    "@storybook/addon-links": "8.4.6",
+    "@storybook/vue3": "8.4.6",
+    "@vue/test-utils": "2.4.6",
+    "eslint": "9.16.0",
+    "happy-dom": "15.11.6",
+    "http-proxy-middleware": "3.0.3",
     "nuxt": "3.14.1592",
     "srcdev-nuxt-components": "0.0.17",
-    "srcdev-nuxt-forms": "2.1.13",
-    "vue": "3.5.13"
+    "srcdev-nuxt-forms": "2.1.14",
+    "vitest": "2.1.5",
+    "vue": "3.5.13",
+    "vue-router": "^4.5.0"
   }
 }
