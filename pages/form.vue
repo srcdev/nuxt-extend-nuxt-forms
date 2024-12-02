@@ -194,7 +194,10 @@
                     :theme
                   >
                     <template #description>
-                      <p class="label-description">This is description: optionsLayout = 'inline'</p>
+                      <p class="label-description">This is description: optionsLayout = 'equal-sizes'<br />Custom icon<br />Direction: forwards</p>
+                    </template>
+                    <template #itemIcon>
+                      <Icon name="material-symbols:bookmark-add-outline" class="icon" />
                     </template>
                   </MultipleCheckboxes>
                 </template>
@@ -214,12 +217,13 @@
                     :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.tagsRadio)"
                     v-model="state.tagsRadio"
                     v-model:fieldData="tagsData"
-                    size="normal"
+                    size="x-small"
                     optionsLayout="inline"
                     :theme
+                    direction="row-reverse"
                   >
                     <template #description>
-                      <p class="label-description">This is description: optionsLayout = 'inline'</p>
+                      <p class="label-description">This is description: optionsLayout = 'inline'<br />Default icon<br />Direction: reverse</p>
                     </template>
                   </MultipleRadiobuttons>
                 </template>
