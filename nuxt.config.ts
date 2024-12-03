@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       mode: 'out-in',
     },
   },
-  css: ['modern-normalize', './assets/styles/index.css'],
+  css: ['modern-normalize', './assets/styles/main.css'],
   modules: ['@nuxt/icon', '@nuxtjs/storybook'],
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
 });

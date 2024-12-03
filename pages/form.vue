@@ -25,7 +25,7 @@
           </ul>
 
           <ClientOnly>
-            <form class="form-wrapper" @submit.stop.prevent="submitForm()">
+            <form class="form-wrapper" @submit.stop.prevent="submitForm()" ref="formRef">
               <div aria-live="assertive" id="aria-live-message"></div>
               <FormField width="wide" :has-gutter="false">
                 <template #default>
@@ -607,22 +607,18 @@ const state = reactive({
   terms: false,
 });
 
-const {
-  initZodForm,
-  zodFormControl,
-  zodErrorObj,
-  // formErrors,
-  pushCustomErrors,
-  doZodValidate,
-  fieldMaxLength,
-} = useZodValidation(formSchema);
+const formRef = ref<HTMLFormElement | null>(null);
+
+const { initZodForm, zodFormControl, zodErrorObj, pushCustomErrors, doZodValidate, fieldMaxLength, scrollToFirstError, scrollToFormHead } = useZodValidation(formSchema, formRef);
 
 initZodForm();
 
 const submitForm = async () => {
-  console.log('submitForm(): doZodValidate(state): ', doZodValidate(state));
   zodFormControl.submitAttempted = true;
-  if (!(await doZodValidate(state))) return;
+  if (!(await doZodValidate(state))) {
+    scrollToFirstError();
+    return;
+  }
   zodFormControl.displayLoader = true;
   try {
     console.log('Form valid - post it');
