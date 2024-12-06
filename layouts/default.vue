@@ -10,6 +10,7 @@
       <li><NuxtLink to="/components/functional/dialog" class="link-normal">Dialog</NuxtLink></li>
       <li><NuxtLink to="/components/functional/popover" class="link-normal">Popover</NuxtLink></li>
       <li><NuxtLink to="/components/ui/layout-row" class="link-normal">Layout Row</NuxtLink></li>
+      <li><NuxtLink to="/components/ui/nav-links" class="link-normal">Nav Links</NuxtLink></li>
     </ul>
     <slot name="content"></slot>
   </div>

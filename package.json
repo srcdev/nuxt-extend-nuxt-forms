@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@oddbird/css-anchor-positioning": "0.4.0",
+    "@vueuse/core": "^12.0.0",
     "modern-normalize": "3.0.1"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "happy-dom": "15.11.7",
     "http-proxy-middleware": "3.0.3",
     "nuxt": "3.14.1592",
-    "srcdev-nuxt-components": "0.0.17",
+    "srcdev-nuxt-components": "^0.0.18",
     "srcdev-nuxt-forms": "^2.1.23",
     "vitest": "2.1.8",
     "vue": "3.5.13",
