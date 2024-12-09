@@ -5,7 +5,7 @@
       <li><NuxtLink to="/components/functional/dialog" class="link-normal">Dialog</NuxtLink></li>
       <li><NuxtLink to="/components/functional/popover" class="link-normal">Popover</NuxtLink></li>
       <li><NuxtLink to="/components/ui/layout-row" class="link-normal">Layout Row</NuxtLink></li>
-      <li><NuxtLink to="/components/ui/nav-links" class="link-normal">Nav Links</NuxtLink></li>
+      <li><NuxtLink to="/components/ui/nav-links" class="link-normal">Nav/Tab Links</NuxtLink></li>
     </ul>
     <slot name="content"></slot>
   </div>
@@ -26,11 +26,14 @@ body {
   gap: 24px;
   padding: 2rem;
   background-color: light-dark(#efefef, #333);
-  color: white;
   list-style-type: none;
 
   li {
     margin-right: 1rem;
+
+    .link-normal {
+      color: light-dark(var(--blue-12), var(--gray-2));
+    }
   }
 }
 </style>

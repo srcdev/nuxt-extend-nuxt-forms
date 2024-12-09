@@ -44,13 +44,13 @@ const navLinks = <INavLink[]>[
 
 <style lang="css">
 .tabs-list.colour-test {
-  --_default-text: light-dark(var(--green-4), var(--green-5));
-  --_active-bg: light-dark(var(--red-12), var(--red-0));
-  --_active-text: light-dark(var(--yellow-3), var(--yellow-6));
-  --_active-indicator: light-dark(var(--orange-6), var(--orange-7));
-  --_hovered-bg: light-dark(var(--blue-7), var(--blue-3));
-  --_hovered-text: light-dark(var(--blue-4), var(--blue-12));
-  --_border-bottom: light-dark(var(--red-7), var(--red-6));
+  --_default-text: light-dark(var(--blue-12), var(--gray-2));
+  --_active-bg: light-dark(var(--blue-12), var(--blue-10));
+  --_active-text: light-dark(var(--gray-1), var(--gray-1));
+  --_active-indicator: light-dark(var(--blue-5), var(--blue-1));
+  --_hovered-bg: light-dark(var(--blue-1), var(--blue-3));
+  --_hovered-text: light-dark(var(--blue-12), var(--blue-12));
+  --_border-bottom: light-dark(var(--blue-5), var(--blue-1));
 
   border-bottom: 1px solid var(--_border-bottom);
   margin-block: 3rem;
