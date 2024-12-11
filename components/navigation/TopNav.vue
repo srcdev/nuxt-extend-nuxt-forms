@@ -27,6 +27,7 @@ const navLinks = <INavLink[]>[
 .top-nav {
   .nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     padding: 2rem;
     background-color: light-dark(#efefef, #333);
