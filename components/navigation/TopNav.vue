@@ -19,6 +19,8 @@ const navLinks = <INavLink[]>[
   { name: 'Masonry Layout', path: '/masonry-layout' },
   { name: 'Sample form', path: '/form' },
   { name: 'Buttons', path: '/buttons' },
+  { name: 'Typography', path: '/typography' },
+  { name: 'Limit Text Rows', path: '/limit-text-rows' },
 ];
 </script>
 <style lang="css">
