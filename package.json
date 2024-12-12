@@ -26,7 +26,7 @@
     "eslint": "9.16.0",
     "happy-dom": "15.11.7",
     "nuxt": "3.14.1592",
-    "srcdev-nuxt-components": "^0.0.22",
+    "srcdev-nuxt-components": "^0.0.23",
     "srcdev-nuxt-forms": "^2.1.28",
     "vitest": "2.1.8",
     "vue": "3.5.13",

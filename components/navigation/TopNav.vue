@@ -21,6 +21,8 @@ const navLinks = <INavLink[]>[
   { name: 'Buttons', path: '/buttons' },
   { name: 'Typography', path: '/typography' },
   { name: 'Limit Text Rows', path: '/limit-text-rows' },
+  { name: 'Grid Header Align Height', path: '/aligned-headers' },
+  { name: 'Simple Grid', path: '/components/ui/simple-grid' },
 ];
 </script>
 <style lang="css">
