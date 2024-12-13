@@ -14,7 +14,7 @@
                 <img class="profile-image" src="https://ui-avatars.com/api/name=1?background=0A8A0A&color=fff" alt="" />
               </template>
               <template #popoverCotent>
-                <h2>Popover content 1</h2>
+                <h2>Popover content 1a</h2>
               </template>
             </PopOver>
           </div>
@@ -27,7 +27,7 @@
                 <img class="profile-image" src="https://ui-avatars.com/api/name=2?background=0A8A0A&color=fff" alt="" />
               </template>
               <template #popoverCotent>
-                <h2>Popover content 2</h2>
+                <h2>Popover content 2a</h2>
               </template>
             </PopOver>
           </div>
