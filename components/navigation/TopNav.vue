@@ -23,6 +23,7 @@ const navLinks = <INavLink[]>[
   { name: 'Limit Text Rows', path: '/limit-text-rows' },
   { name: 'Grid Header Align Height', path: '/aligned-headers' },
   { name: 'Simple Grid', path: '/components/ui/simple-grid' },
+  { name: 'Accordian', path: '/components/ui/accordian' },
 ];
 </script>
 <style lang="css">
