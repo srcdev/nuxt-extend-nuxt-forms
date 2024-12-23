@@ -5,6 +5,7 @@
         <NuxtLink :to="link.path" class="link-normal">{{ link.name }}</NuxtLink>
       </li>
     </ul>
+    <DarkModeSwitcher :style-class-passthrough="['mi-24']" />
   </nav>
 </template>
 
@@ -29,9 +30,13 @@ const navLinks = <INavLink[]>[
 </script>
 <style lang="css">
 .top-nav {
+  display: flex;
+  align-items: center;
+
   .nav {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
     gap: 24px;
     padding: 2rem;
     background-color: light-dark(#efefef, #333);

@@ -179,6 +179,22 @@
                 </template>
               </FormField>
 
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <ToggleSwitchWithLabel v-model="state.darkMode" id="darkMode" name="darkMode" label="Toggle Dark mode" :theme>
+                    <template #description>
+                      <p class="label-description">This is a description of what the user is required to do</p>
+                    </template>
+                    <template #iconOn>
+                      <Icon name="radix-icons:moon" class="icon" />
+                    </template>
+                    <template #iconOff>
+                      <Icon name="radix-icons:sun" class="icon" />
+                    </template>
+                  </ToggleSwitchWithLabel>
+                </template>
+              </FormField>
+
               <FormField v-if="tagsData !== null" width="wide" :has-gutter="false">
                 <template #default>
                   <MultipleCheckboxes
@@ -600,6 +616,7 @@ const state = reactive({
   count: 25,
   count2: 25,
   score: 50,
+  darkMode: false,
   cities: [],
   countries: [],
   tags: [],
