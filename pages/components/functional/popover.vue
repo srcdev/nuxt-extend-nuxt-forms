@@ -7,27 +7,40 @@
           <p class="body-normal">
             "anchorName" Supported <span class="body-normal-semibold">{{ anchorNameSupported }}</span>
           </p>
-          <div style="text-align: center">
-            <h1>PopOver component 1</h1>
+          <div style="text-align: left">
+            <h1>PopOver component left</h1>
             <PopOver popovertarget="profile1" :styleClassPassthrough="['popover-1']">
               <template #trigger>
                 <img class="profile-image" src="https://ui-avatars.com/api/name=1?background=0A8A0A&color=fff" alt="" />
               </template>
               <template #popoverCotent>
-                <h2>Popover content 1a</h2>
+                <h2>Popover content left</h2>
               </template>
             </PopOver>
           </div>
         </LayoutRow>
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
           <div style="text-align: center">
-            <h1>PopOver component 2</h1>
+            <h1>PopOver component centre</h1>
             <PopOver popovertarget="profile2" :styleClassPassthrough="['popover-2']">
               <template #trigger>
                 <img class="profile-image" src="https://ui-avatars.com/api/name=2?background=0A8A0A&color=fff" alt="" />
               </template>
               <template #popoverCotent>
-                <h2>Popover content 2a</h2>
+                <h2>Popover content centre</h2>
+              </template>
+            </PopOver>
+          </div>
+        </LayoutRow>
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <div style="text-align: right">
+            <h1>PopOver component right</h1>
+            <PopOver popovertarget="profile3" :styleClassPassthrough="['popover-3']">
+              <template #trigger>
+                <img class="profile-image" src="https://ui-avatars.com/api/name=2?background=0A8A0A&color=fff" alt="" />
+              </template>
+              <template #popoverCotent>
+                <h2>Popover content right</h2>
               </template>
             </PopOver>
           </div>

@@ -32,7 +32,7 @@
     "happy-dom": "15.11.7",
     "http-proxy-middleware": "3.0.3",
     "nuxt": "3.15.0",
-    "srcdev-nuxt-components": "0.0.32",
+    "srcdev-nuxt-components": "0.0.33",
     "srcdev-nuxt-forms": "2.1.36",
     "vitest": "2.1.8",
     "vue": "3.5.13",
