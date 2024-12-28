@@ -44,8 +44,8 @@
           </p>
         </LayoutRow>
 
-        <LayoutRow tag="div" variant="inset-content" :styleClassPassthrough="['mbe-20']">
-          <h2 class="heading-2">Inset Content Track (840px)</h2>
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <h2 class="heading-2">Full Width</h2>
           <p>
             Lorem ipsum odor amet, consectetuer adipiscing elit. Nec elementum maecenas placerat laoreet curae elit convallis himenaeos. Tellus varius cursus convallis commodo suspendisse litora.
             Platea accumsan interdum ultrices adipiscing molestie cras dui. Vehicula egestas nisi sagittis fames metus velit. Sodales blandit nisi eu dis sit, ridiculus aliquam. Morbi tellus eu in
@@ -58,8 +58,8 @@
           </p>
         </LayoutRow>
 
-        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
-          <h2 class="heading-2">Full Width</h2>
+        <LayoutRow tag="div" variant="inset-content" :styleClassPassthrough="['mbe-20']">
+          <h2 class="heading-2">Inset Content Track (840px)</h2>
           <p>
             Lorem ipsum odor amet, consectetuer adipiscing elit. Nec elementum maecenas placerat laoreet curae elit convallis himenaeos. Tellus varius cursus convallis commodo suspendisse litora.
             Platea accumsan interdum ultrices adipiscing molestie cras dui. Vehicula egestas nisi sagittis fames metus velit. Sodales blandit nisi eu dis sit, ridiculus aliquam. Morbi tellus eu in
@@ -93,10 +93,10 @@ useHead({
 <style lang="css">
 .layout-row-example {
   .layout-row {
-    outline: 1px solid red;
+    outline: 0.1rem solid red;
 
     .layout-row-inner {
-      outline: 1px solid blue;
+      outline: 0.1rem solid blue;
     }
   }
 }

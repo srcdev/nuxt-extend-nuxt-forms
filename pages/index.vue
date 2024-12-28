@@ -34,8 +34,8 @@ useHead({
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 32px;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 ul.flex-group {

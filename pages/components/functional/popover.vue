@@ -65,10 +65,10 @@ dialog {
     width: 300px;
     height: 150px;
     /* background-color: #fff; */
-    border: 1px solid #fff;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border: 0.1rem solid #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.1);
   }
 }
 </style>

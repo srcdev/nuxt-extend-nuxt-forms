@@ -52,7 +52,7 @@ const navLinks = <INavLink[]>[
   --_hovered-text: light-dark(var(--blue-12), var(--blue-12));
   --_border-bottom: light-dark(var(--blue-5), var(--blue-1));
 
-  border-bottom: 1px solid var(--_border-bottom);
+  border-bottom: 0.1rem solid var(--_border-bottom);
   margin-block: 3rem;
 
   .nav__hovered {
@@ -67,7 +67,7 @@ const navLinks = <INavLink[]>[
 
   .nav__active-indicator {
     background: var(--_active-indicator);
-    height: 4px;
+    height: 0.4rem;
   }
 
   .tabs-list-item {

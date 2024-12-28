@@ -44,8 +44,8 @@ useHead({
 
 <style lang="css">
 .text-wrapper {
-  padding: 20px;
-  outline: 1px solid light-dark(var(--blue-12), var(--gray-2));
+  padding: 2rem;
+  outline: 0.1rem solid light-dark(var(--blue-12), var(--gray-2));
   place-content: center;
 
   p {

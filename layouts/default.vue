@@ -54,7 +54,7 @@ body {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 2.4rem;
   padding: 2rem;
   background-color: light-dark(#efefef, #333);
   list-style-type: none;

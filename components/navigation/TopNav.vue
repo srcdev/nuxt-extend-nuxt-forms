@@ -37,7 +37,7 @@ const navLinks = <INavLink[]>[
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
-    gap: 24px;
+    gap: 2.4rem;
     padding: 2rem;
     background-color: light-dark(#efefef, #333);
     list-style-type: none;

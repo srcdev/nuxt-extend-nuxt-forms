@@ -56,12 +56,12 @@ useHead({
 .cols-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 2.4rem;
 
   .col {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    gap: 16px;
+    gap: 1.6rem;
   }
 }
 </style>
