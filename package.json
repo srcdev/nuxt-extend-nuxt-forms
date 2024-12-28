@@ -27,7 +27,7 @@
     "happy-dom": "15.11.7",
     "nuxt": "3.15.0",
     "srcdev-nuxt-components": "0.0.31",
-    "srcdev-nuxt-forms": "2.1.34",
+    "srcdev-nuxt-forms": "2.1.35",
     "vitest": "2.1.8",
     "vue": "3.5.13",
     "vue-router": "4.5.0"
