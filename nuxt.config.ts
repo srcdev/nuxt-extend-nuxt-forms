@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: {
         lang: 'en',
-        'data-color-scheme': 'light',
+        'data-color-scheme': 'auto',
       },
       titleTemplate: '%s - Nuxt app exended by other Nuxt layers',
       meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],

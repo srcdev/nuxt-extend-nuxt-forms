@@ -195,6 +195,24 @@
                 </template>
               </FormField>
 
+              <FormField width="wide" :has-gutter="false">
+                <template #default>
+                  <ToggleSwitchWithLabel
+                    v-model="state.toggleBoolean"
+                    :errorMessage="formErrors?.toggleBoolean?._errors[0] ?? ''"
+                    :fieldHasError="Boolean(zodFormControl.submitAttempted && formErrors?.toggleBoolean)"
+                    id="toggleBoolean"
+                    name="toggleBoolean"
+                    label="Toggle Dark mode"
+                    :theme
+                  >
+                    <template #description>
+                      <p class="label-description">Toggle some value</p>
+                    </template>
+                  </ToggleSwitchWithLabel>
+                </template>
+              </FormField>
+
               <FormField v-if="tagsData !== null" width="wide" :has-gutter="false">
                 <template #default>
                   <MultipleCheckboxes
@@ -581,6 +599,7 @@ const formSchema = reactive(
       tagsRadio: z.string().min(1, { message: 'Please choose a tag' }),
       title: z.string().min(1, { message: 'Title is required' }),
       otherTitle: z.string().min(1, { message: 'Title is required' }),
+      toggleBoolean: z.boolean().refine((val) => val === true, { message: 'You must tick this box' }),
       agreed: z.boolean().refine((val) => val === true, { message: 'You must tick this box' }),
       agree: z.boolean().refine((val) => val === true, { message: 'You must tick this box' }),
       terms: z.boolean().refine((val) => val === true, { message: 'You must accept our terms' }),
@@ -599,6 +618,7 @@ const formSchema = reactive(
       tagsRadio: true,
       title: true,
       otherTitle: true,
+      toggleBoolean: true,
       agreed: true,
       agree: true,
       terms: true,
@@ -623,6 +643,7 @@ const state = reactive({
   tagsRadio: [],
   title: '',
   otherTitle: '',
+  toggleBoolean: false,
   agreed: false,
   agree: false,
   terms: false,
