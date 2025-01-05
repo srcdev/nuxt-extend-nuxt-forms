@@ -39,15 +39,10 @@ const navLinks = <INavLink[]>[
     flex-grow: 1;
     gap: 2.4rem;
     padding: 2rem;
-    background-color: light-dark(#efefef, #333);
     list-style-type: none;
 
     li {
       margin-right: 1rem;
-
-      .link-normal {
-        color: light-dark(var(--blue-12), var(--gray-2));
-      }
     }
   }
 }
