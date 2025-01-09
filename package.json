@@ -33,7 +33,7 @@
     "http-proxy-middleware": "3.0.3",
     "nuxt": "3.15.1",
     "srcdev-nuxt-components": "0.0.34",
-    "srcdev-nuxt-forms": "2.1.38",
+    "srcdev-nuxt-forms": "2.1.42",
     "vitest": "2.1.8",
     "vue": "3.5.13",
     "vue-router": "4.5.0"
