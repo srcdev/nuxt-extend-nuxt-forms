@@ -16,11 +16,11 @@
 
           <h2 class="heading-4">Body Regular</h2>
           <ul>
-            <li class="body-large">Body Large (<code>var(--step-)</code>)</li>
-            <li class="body-medium">Body Medium (<code>var(--step-)</code>)</li>
-            <li class="body-normal">Body Normal (<code>var(--step-)</code>)</li>
-            <li class="body-small">Body Small (<code>var(--step-)</code>)</li>
-            <li class="body-xsmall">Body X-Small (<code>var(--step-)</code>)</li>
+            <li class="body-large">Body Large (<code>var(--step-3)</code>)</li>
+            <li class="body-medium">Body Medium (<code>var(--step-2)</code>)</li>
+            <li class="body-normal">Body Normal (<code>var(--step-1)</code>)</li>
+            <li class="body-small">Body Small (<code>var(--step-0)</code>)</li>
+            <li class="body-xsmall">Body X-Small (<code>var(--step--1)</code>)</li>
           </ul>
 
           <h2 class="heading-4">Body Semi-Bold</h2>
