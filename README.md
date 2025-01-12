@@ -33,9 +33,22 @@ Build the application for production:
 npm run build
 ```
 
+### Generate for static deployment
+
+First create the files, the will be available at location `.output/public/` for deplyment to static server.
+
+````bash
+npm run generate
+``
+Then can be tested with
+First create the files
+```bash
+npx serve dist
+```
+
 Locally preview production build:
 
 ```bash
-```
+````
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
