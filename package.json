@@ -15,25 +15,25 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@nuxtjs/storybook": "8.3.2",
     "@oddbird/css-anchor-positioning": "0.4.0",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/addon-interactions": "8.4.7",
+    "@storybook/addon-links": "8.4.7",
+    "@storybook/vue3": "8.4.7",
     "modern-normalize": "3.0.1"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "0.7.5",
     "@nuxt/icon": "1.10.3",
-    "@nuxtjs/storybook": "8.3.2",
     "@nuxt/test-utils": "3.15.4",
-    "@storybook/addon-essentials": "8.4.7",
-    "@storybook/addon-interactions": "8.4.7",
-    "@storybook/addon-links": "8.4.7",
-    "@storybook/vue3": "8.4.7",
     "@vue/test-utils": "2.4.6",
     "eslint": "9.18.0",
     "happy-dom": "15.11.7",
     "http-proxy-middleware": "3.0.3",
     "nuxt": "3.15.1",
     "srcdev-nuxt-components": "0.0.34",
-    "srcdev-nuxt-forms": "2.1.46",
+    "srcdev-nuxt-forms": "2.2.0",
     "vitest": "2.1.8",
     "vue": "3.5.13",
     "vue-router": "4.5.0"
