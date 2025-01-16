@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     },
   ],
   css: ['modern-normalize', './assets/styles/main.css'],
-  modules: ['@nuxt/icon', '@nuxtjs/storybook'],
+  modules: ['@nuxt/icon'],
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
   // nitro: {
   //   output: {
