@@ -7,7 +7,7 @@
         </LayoutRow>
         <LayoutRow tag="div" variant="popout" :style-class-passthrough="['mbs-32']">
           <template #default>
-            <Tabs :navItems="navLinks" :style-class-passthrough="['colour-test']" />
+            <h3 class="heading-3">WIP</h3>
           </template>
         </LayoutRow>
       </template>
