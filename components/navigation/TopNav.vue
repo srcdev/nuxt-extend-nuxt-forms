@@ -26,6 +26,7 @@ const navLinks = <INavLink[]>[
   { name: 'Simple Grid', path: '/components/ui/simple-grid' },
   { name: 'Accordian', path: '/components/ui/accordian' },
   { name: 'Tabs', path: '/components/ui/tabs' },
+  { name: 'Prompts', path: '/components/ui/display-prompt' },
 ];
 </script>
 <style lang="css">
