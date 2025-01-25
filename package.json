@@ -18,6 +18,8 @@
     "modern-normalize": "3.0.1"
   },
   "devDependencies": {
+    "@iconify-json/akar-icons": "^1.2.2",
+    "@iconify-json/bitcoin-icons": "^1.2.2",
     "@nuxt/eslint-config": "0.7.5",
     "@nuxt/icon": "1.10.3",
     "@nuxt/test-utils": "3.15.4",
