@@ -25,7 +25,8 @@ const navLinks = <INavLink[]>[
   { name: 'Grid Header Align Height', path: '/aligned-headers' },
   { name: 'Simple Grid', path: '/components/ui/simple-grid' },
   { name: 'Accordian', path: '/components/ui/accordian' },
-  { name: 'Tabs', path: '/components/ui/tabs' },
+  { name: 'Tabs X', path: '/components/ui/tabs' },
+  { name: 'Tabs Y', path: '/components/ui/tabs-y' },
   { name: 'Prompts', path: '/components/ui/display-prompt' },
 ];
 </script>
