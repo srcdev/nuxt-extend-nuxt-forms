@@ -31,8 +31,14 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  imports: {
+    dirs: ['./stores'],
+  },
+  // pinia: {
+  //   autoImports: ['defineStore', 'acceptHMRUpdate'],
+  // },
   css: ['modern-normalize', './assets/styles/main.css'],
-  modules: ['@nuxt/icon'],
+  modules: ['@nuxt/icon', '@pinia/nuxt'],
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
   // nitro: {
   //   output: {
