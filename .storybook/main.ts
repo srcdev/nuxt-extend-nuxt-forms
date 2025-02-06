@@ -5,7 +5,34 @@ const config: StorybookConfig = {
   addons: ['@storybook/addon-essentials', '@chromatic-com/storybook', '@storybook/addon-interactions'],
   framework: {
     name: '@storybook-vue/nuxt',
-    options: {},
+    options: { docgen: 'vue-component-meta' },
+  },
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+
+    return mergeConfig(config, {
+      optimizeDeps: {
+        include: ['jsdoc-type-pratt-parser'],
+      },
+      resolve: {
+        alias: {
+          // Resolve Vue bundler to support runtime compilation
+          vue: 'vue/dist/vue.esm-bundler.js',
+          // vue: 'vue',
+        },
+      },
+      server: {
+        proxy: {
+          // Change Vite proxy configuration to enable Storybook server to serve fonts from Nuxt Dev server
+          '^/(_nuxt|_ipx|_icon|__nuxt_devtools__|_fonts)': {
+            target: 'http://localhost:3000',
+            changeOrigin: true,
+            secure: false,
+            ws: true,
+          },
+        },
+      },
+    });
   },
 };
 export default config;

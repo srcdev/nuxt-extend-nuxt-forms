@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   devServer: {
-    https: true,
+    https: false,
   },
   app: {
     head: {
@@ -39,6 +39,9 @@ export default defineNuxtConfig({
   // },
   css: ['modern-normalize', './assets/styles/main.css'],
   modules: ['@nuxt/icon', '@pinia/nuxt', '@nuxtjs/storybook'],
+  vue: {
+    runtimeCompiler: 'IS_STORYBOOK' in process.env,
+  },
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
   // nitro: {
   //   output: {
