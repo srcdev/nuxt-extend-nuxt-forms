@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   //   autoImports: ['defineStore', 'acceptHMRUpdate'],
   // },
   css: ['modern-normalize', './assets/styles/main.css'],
-  modules: ['@nuxt/icon', '@pinia/nuxt'],
+  modules: ['@nuxt/icon', '@pinia/nuxt', '@nuxtjs/storybook'],
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
   // nitro: {
   //   output: {

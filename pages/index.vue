@@ -24,7 +24,7 @@
 
             <h2>Counter Store</h2>
 
-            <p data-testid="counter-values">Counter: {{ counter.n }}. Double: {{ counter.double }}</p>
+            <p data-testid="counter-values">Counter: {{ n }}. Double: {{ double }}</p>
 
             <p>Increment the Store:</p>
 
@@ -102,6 +102,7 @@ useHead({
 });
 
 const counter = useCounter();
+const { n, double } = storeToRefs(useCounter());
 </script>
 
 <style lang="css">
