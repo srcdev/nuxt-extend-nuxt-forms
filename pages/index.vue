@@ -3,6 +3,11 @@
     <NuxtLayout name="default">
       <template #content>
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <h1 class="header-1">Test Icon</h1>
+          <TestIcon />
+        </LayoutRow>
+
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
           <h2 class="heading-2">Examples extended via NPM package</h2>
 
           <div>

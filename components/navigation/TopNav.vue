@@ -5,7 +5,7 @@
         <NuxtLink :to="link.path" class="link-normal">{{ link.name }}</NuxtLink>
       </li>
     </ul>
-    <DarkModeSwitcher label="Toggle dark mode" id="dark-mode-switcher" name="dark-mode-switcher" :style-class-passthrough="['mi-24']" />
+    <LazyDarkModeSwitcher label="Toggle dark mode" id="dark-mode-switcher" name="dark-mode-switcher" :style-class-passthrough="['mi-24']" />
   </nav>
 </template>
 

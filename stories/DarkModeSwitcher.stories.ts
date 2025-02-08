@@ -1,5 +1,5 @@
-// import type { Meta, StoryFn, StoryObj } from '@nuxtjs/storybook';
-import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryFn, StoryObj } from '@nuxtjs/storybook';
+// import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import { h, Suspense } from 'vue';
 
 import DarkModeSwitcher from '../node_modules/srcdev-nuxt-forms/components/utils/dark-mode-switcher/DarkModeSwitcher.vue';
