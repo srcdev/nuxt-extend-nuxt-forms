@@ -1,4 +1,5 @@
-import type { Meta, StoryFn, StoryObj } from '@nuxtjs/storybook';
+// import type { Meta, StoryFn, StoryObj } from '@nuxtjs/storybook';
+import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import { h, Suspense } from 'vue';
 
 import DarkModeSwitcher from '../node_modules/srcdev-nuxt-forms/components/utils/dark-mode-switcher/DarkModeSwitcher.vue';
@@ -8,33 +9,11 @@ const meta = {
   component: DarkModeSwitcher,
   argTypes: {
     labelWeight: {
-      options: ['x-small', 'small', 'normal', 'medium', 'large'],
+      options: ['normal', 'semi-bold', 'bold'],
       control: { type: 'select' },
     },
     size: {
-      options: [
-        'wght-100',
-        'wght-200',
-        'wght-300',
-        'wght-400',
-        'wght-500',
-        'wght-600',
-        'wght-700',
-        'wght-800',
-        'wght-900',
-        'light',
-        'normal',
-        'bold',
-        'fvs-wght-100',
-        'fvs-wght-200',
-        'fvs-wght-300',
-        'fvs-wght-400',
-        'fvs-wght-500',
-        'fvs-wght-600',
-        'fvs-wght-700',
-        'fvs-wght-800',
-        'fvs-wght-900',
-      ],
+      options: ['x-small', 'small', 'normal', 'medium', 'large'],
       control: { type: 'select' },
     },
   },
@@ -48,8 +27,8 @@ export const Default: Story = {
     label: 'Toggle dark mode',
     name: 'dark-mode-switcher',
     styleClassPassthrough: ['mi-24'],
-    labelWeight: 'bold',
-    size: 'md',
+    labelWeight: 'semi-bold',
+    size: 'small',
   },
   render(args) {
     return {
@@ -71,33 +50,11 @@ export const Default: Story = {
 //   component: DarkModeSwitcher,
 //   argTypes: {
 //     labelWeight: {
-//       options: ['x-small', 'small', 'normal', 'medium', 'large'],
+//       options: ['normal', 'semi-bold', 'bold'],
 //       control: { type: 'select' },
 //     },
 //     size: {
-//       options: [
-//         'wght-100',
-//         'wght-200',
-//         'wght-300',
-//         'wght-400',
-//         'wght-500',
-//         'wght-600',
-//         'wght-700',
-//         'wght-800',
-//         'wght-900',
-//         'light',
-//         'normal',
-//         'bold',
-//         'fvs-wght-100',
-//         'fvs-wght-200',
-//         'fvs-wght-300',
-//         'fvs-wght-400',
-//         'fvs-wght-500',
-//         'fvs-wght-600',
-//         'fvs-wght-700',
-//         'fvs-wght-800',
-//         'fvs-wght-900',
-//       ],
+//       options: ['x-small', 'small', 'normal', 'medium', 'large'],
 //       control: { type: 'select' },
 //     },
 //   },
@@ -106,8 +63,8 @@ export const Default: Story = {
 //     name: 'dark-mode-switcher',
 //     styleClassPassthrough: ['mi-24'],
 //     labelWeight: 'bold',
-//     size: 'md',
-//   }
+//     size: 'normal',
+//   },
 // } as Meta<typeof DarkModeSwitcher>;
 
 // const Template: StoryFn<typeof DarkModeSwitcher> = (args) => ({
@@ -133,5 +90,5 @@ export const Default: Story = {
 //   name: 'dark-mode-switcher',
 //   styleClassPassthrough: ['mi-24'],
 //   labelWeight: 'bold',
-//   size: 'md',
+//   size: 'normal',
 // };
