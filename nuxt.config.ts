@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// import path from 'path';
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -34,19 +33,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['./stores'],
   },
-  // pinia: {
-  //   autoImports: ['defineStore', 'acceptHMRUpdate'],
-  // },
   css: ['modern-normalize', './assets/styles/main.css'],
   modules: ['@nuxt/icon', '@pinia/nuxt', '@nuxtjs/storybook'],
-  vue: {
-    runtimeCompiler: 'IS_STORYBOOK' in process.env,
-  },
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
-  // nitro: {
-  //   output: {
-  //     publicDir: path.join(__dirname, 'custom-output-path'),
-  //     // publicDir: '../custom-output-path',
-  //   },
-  // },
 });

@@ -12,8 +12,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "vitest",
-    "storybook": "IS_STORYBOOK=true storybook dev -p 6006",
-    "build-storybook": "IS_STORYBOOK=true storybook build"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@oddbird/css-anchor-positioning": "0.4.0",

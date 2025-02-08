@@ -14,9 +14,7 @@ const config: StorybookConfig = {
     return mergeConfig(config, {
       server: {
         proxy: {
-          // Change Vite proxy configuration to enable Storybook server to serve fonts from Nuxt Dev server
-
-          // Handle NuxtIcon proxy
+          // Handle NuxtIcon requests
           '/api/_nuxt_icon': {
             target: 'http://localhost:3000',
             changeOrigin: true,
