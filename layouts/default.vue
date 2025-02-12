@@ -34,11 +34,11 @@ useHead({
   // ],
 });
 
-const { getSetPrefereredColourScheme } = useColourScheme();
+// const { getSetPrefereredColourScheme } = useColourScheme();
 
-onBeforeMount(() => {
-  getSetPrefereredColourScheme();
-});
+// onBeforeMount(() => {
+//   getSetPrefereredColourScheme();
+// });
 </script>
 
 <style lang="css">

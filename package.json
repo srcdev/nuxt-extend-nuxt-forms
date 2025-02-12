@@ -41,7 +41,7 @@
     "happy-dom": "16.8.1",
     "http-proxy-middleware": "3.0.3",
     "srcdev-nuxt-components": "1.1.2",
-    "srcdev-nuxt-forms": "2.4.5",
+    "srcdev-nuxt-forms": "2.4.6",
     "storybook": "8.4.7",
     "vitest": "3.0.5",
     "vue-router": "4.5.0"
