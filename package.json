@@ -40,7 +40,7 @@
     "eslint-plugin-storybook": "0.11.2",
     "happy-dom": "16.8.1",
     "http-proxy-middleware": "3.0.3",
-    "srcdev-nuxt-components": "1.1.2",
+    "srcdev-nuxt-components": "1.1.3",
     "srcdev-nuxt-forms": "2.4.10",
     "storybook": "8.4.7",
     "vitest": "3.0.5",

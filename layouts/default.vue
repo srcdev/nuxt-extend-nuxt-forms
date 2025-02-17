@@ -6,6 +6,7 @@
       <li><NuxtLink to="/components/functional/popover" class="link-normal">Popover</NuxtLink></li>
       <li><NuxtLink to="/components/ui/layout-row" class="link-normal">Layout Row</NuxtLink></li>
       <li><NuxtLink to="/components/ui/nav-links" class="link-normal">Nav/Tab Links</NuxtLink></li>
+      <li><NuxtLink to="/components/ui/container-glow" class="link-normal">Glowing Cards</NuxtLink></li>
     </ul>
     <slot name="content"></slot>
   </div>
