@@ -27,6 +27,7 @@ const navLinks = <INavLink[]>[
   { name: 'Tabs X', path: '/components/ui/tabs' },
   { name: 'Tabs Y', path: '/components/ui/tabs-y' },
   { name: 'Prompts', path: '/components/ui/display-prompt' },
+  { name: 'Mix Blend Mode', path: '/mix-blend-mode' },
 ];
 </script>
 <style lang="css">

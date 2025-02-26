@@ -1,4 +1,5 @@
-@import './_page.css';
-@import './_margin-helpers.css';
-@import './_padding-helpers.css';
-@import './_nuxt-transitions.css';
+@import './_nuxt-transitions';
+@import './_page';
+@import './_margin-helpers';
+@import './_padding-helpers';
+@import './_canvasWidths';
