@@ -16,7 +16,6 @@ interface INavLink {
 
 const navLinks = <INavLink[]>[
   { name: 'Home', path: '/' },
-  { name: 'Masonry Layout', path: '/masonry-layout' },
   { name: 'Sample form', path: '/form' },
   { name: 'Buttons', path: '/buttons' },
   { name: 'Typography', path: '/typography' },
@@ -28,6 +27,9 @@ const navLinks = <INavLink[]>[
   { name: 'Tabs Y', path: '/components/ui/tabs-y' },
   { name: 'Prompts', path: '/components/ui/display-prompt' },
   { name: 'Mix Blend Mode', path: '/mix-blend-mode' },
+  { name: 'Masonry Grid Simple', path: '/components/ui/masonry-grid' },
+  { name: 'Masonry Grid Sorted', path: '/components/ui/masonry-grid-sorted' },
+  { name: 'Masonry Grid Ordered', path: '/components/ui/masonry-grid-ordered' },
 ];
 </script>
 <style lang="css">
