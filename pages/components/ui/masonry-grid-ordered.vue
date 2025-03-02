@@ -54,4 +54,18 @@ const displayCount = 12;
 const { data: quotesData, status } = await useFetch<IQuotes>('https://dummyjson.com/quotes');
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+.masonry-grid-ordered {
+  --_border-color: light-dark(hsl(0, 29%, 3%), hsl(0, 0%, 92%));
+  --_background-colour: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 10%));
+
+  .masonry-grid-ordered-wrapper {
+    .masonry-grid-ordered-item {
+      background-color: var(--_background-colour);
+      outline: 0.1rem solid var(--_border-color);
+      padding: 1.2rem;
+      border-radius: 4px;
+    }
+  }
+}
+</style>
