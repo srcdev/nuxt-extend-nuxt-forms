@@ -1,55 +1,60 @@
-import type { ICounterStore, ICounterState } from '~/types/types.counterStore';
-
 const delay = (t: number) => new Promise((r) => setTimeout(r, t));
 
-export const useCounter = defineStore('counter', {
-  state: (): ICounterState => ({
-    n: 2,
-    incrementedTimes: 0,
-    decrementedTimes: 0,
-    numbers: [] as number[],
-  }),
+export const useCounterStore = defineStore('counterStore', () => {
+  // State
+  const count = ref(2);
+  const incrementedTimes = ref(0);
+  const decrementedTimes = ref(0);
+  const numbers = ref<number[]>([]);
 
-  getters: {
-    double: (state) => state.n * 2,
-  },
+  // Getters
+  const double = computed(() => count.value * 2);
 
-  actions: {
-    increment(amount = 1) {
-      this.incrementedTimes++;
-      this.n += amount;
-    },
+  // actions: {
+  const increment = (amount = 1) => {
+    incrementedTimes.value++;
+    count.value += amount;
+  };
 
-    changeMe() {
-      console.log('change me to test HMR');
-    },
+  const changeMe = () => {
+    console.log('change me to test HMR');
+  };
 
-    async fail() {
-      const n = this.n;
-      await delay(1000);
-      this.numbers.push(n);
-      await delay(1000);
-      if (this.n !== n) {
-        throw new Error('Someone changed n!');
-      }
+  const fail = async () => {
+    const n = count.value;
+    await delay(1000);
+    numbers.value.push(n);
+    await delay(1000);
+    if (count.value !== n) {
+      throw new Error('Someone changed n!');
+    }
 
-      return n;
-    },
+    return n;
+  };
 
-    async decrementToZero(interval: number = 300) {
-      if (this.n <= 0) return;
+  const decrementToZero = async (interval: number = 300) => {
+    if (count.value <= 0) return;
 
-      while (this.n > 0) {
-        this.$patch((state) => {
-          state.n--;
-          state.decrementedTimes++;
-        });
-        await delay(interval);
-      }
-    },
-  },
+    while (count.value > 0) {
+      count.value--;
+      decrementedTimes.value++;
+      await delay(interval);
+    }
+  };
+
+  return {
+    count,
+    incrementedTimes,
+    decrementedTimes,
+    numbers,
+    double,
+    increment,
+    changeMe,
+    fail,
+    decrementToZero,
+  };
 });
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useCounter, import.meta.hot));
+  import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot));
 }

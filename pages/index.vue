@@ -17,8 +17,6 @@
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
           <h2 class="heading-2">Examples extended via NPM package</h2>
 
-
-
           <div>
             <p>
               This is an example store to test out devtools. Try one of the following with the devtools open:
@@ -38,47 +36,32 @@
 
             <h2>Counter Store</h2>
 
-            <p data-testid="counter-values">Counter: {{ n }}. Double: {{ double }}</p>
+            <p data-testid="counter-values">Counter: {{ count }}. Double: {{ double }}</p>
 
             <p>Increment the Store:</p>
 
             <ul class="flex-group">
               <li>
-                <button @click="counter.increment()" data-testid="increment">+1</button>
+                <button @click="useCounterStore().increment()" data-testid="increment">+1</button>
               </li>
               <li>
-                <button @click="counter.increment(10)">+10</button>
+                <button @click="useCounterStore().increment(10)">+10</button>
               </li>
               <li>
-                <button @click="counter.increment(100)">+100</button>
-              </li>
-              <li>
-                <button @click="counter.n++">Direct Increment</button>
-              </li>
-              <li>
-                <button
-                  @click="
-                    counter.$patch((state) => {
-                      state.n++;
-                      state.incrementedTimes++;
-                    })
-                  "
-                >
-                  Direct patch
-                </button>
+                <button @click="useCounterStore().increment(100)">+100</button>
               </li>
             </ul>
 
             <ul class="flex-group">
               <li>
-                <button @click="counter.fail">Test Errors</button>
+                <button @click="useCounterStore().fail()">Test Errors</button>
               </li>
               <li>
-                <button @click="counter.decrementToZero()">Decrement to zero</button>
+                <button @click="useCounterStore().decrementToZero()">Decrement to zero</button>
               </li>
               <li>
-                <button @click="counter.changeMe()">
-                  <code>counter.changeMe()</code>
+                <button @click="useCounterStore().changeMe()">
+                  <code>changeMe()</code>
                 </button>
               </li>
             </ul>
@@ -115,8 +98,8 @@ useHead({
   },
 });
 
-const counter = useCounter();
-const { n, double } = storeToRefs(useCounter());
+const counter = useCounterStore();
+const { count, double } = storeToRefs(useCounterStore());
 </script>
 
 <style lang="css">
