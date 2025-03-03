@@ -8,6 +8,7 @@ export const useCounterStore = defineStore('counterStore', () => {
   const numbers = ref<number[]>([]);
 
   // Getters
+  const counter = computed(() => count.value);
   const double = computed(() => count.value * 2);
 
   // actions: {
@@ -43,7 +44,7 @@ export const useCounterStore = defineStore('counterStore', () => {
   };
 
   return {
-    count,
+    counter,
     incrementedTimes,
     decrementedTimes,
     numbers,

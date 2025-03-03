@@ -36,7 +36,7 @@
 
             <h2>Counter Store</h2>
 
-            <p data-testid="counter-values">Counter: {{ count }}. Double: {{ double }}</p>
+            <p data-testid="counter-values">Counter: {{ counter }}. Double: {{ double }}</p>
 
             <p>Increment the Store:</p>
 
@@ -72,7 +72,7 @@
               <code>store.$state</code>:
             </p>
 
-            <pre>{{ counter.$state }}</pre>
+            <pre>{{ useCounterStore().$state }}</pre>
           </div>
         </LayoutRow>
       </template>
@@ -98,8 +98,8 @@ useHead({
   },
 });
 
-const counter = useCounterStore();
-const { count, double } = storeToRefs(useCounterStore());
+// const counterStore = useCounterStore();
+const { counter, double } = storeToRefs(useCounterStore());
 </script>
 
 <style lang="css">
