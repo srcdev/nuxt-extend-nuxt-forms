@@ -30,6 +30,7 @@ const navLinks = <INavLink[]>[
   { name: 'Masonry Grid Simple', path: '/components/ui/masonry-grid' },
   { name: 'Masonry Grid Sorted', path: '/components/ui/masonry-grid-sorted' },
   { name: 'Masonry Grid Ordered', path: '/components/ui/masonry-grid-ordered' },
+  { name: 'CSS Counter Test', path: '/components/ui/css-counters' },
 ];
 </script>
 <style lang="css">
