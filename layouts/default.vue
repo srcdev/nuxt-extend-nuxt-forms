@@ -1,15 +1,6 @@
 <template>
   <div class="page-layout">
     <TopNav />
-    <ul class="nav mbs-20">
-      <li><NuxtLink to="/components/functional/dialog" class="link-normal">Dialog</NuxtLink></li>
-      <li><NuxtLink to="/components/functional/popover" class="link-normal">Popover</NuxtLink></li>
-      <li><NuxtLink to="/components/ui/layout-row" class="link-normal">Layout Row</NuxtLink></li>
-      <li><NuxtLink to="/components/ui/layout-grid-a" class="link-normal">Layout Grid A</NuxtLink></li>
-      <li><NuxtLink to="/components/ui/layout-grid-b" class="link-normal">Layout Grid B</NuxtLink></li>
-      <li><NuxtLink to="/components/ui/nav-links" class="link-normal">Nav/Tab Links</NuxtLink></li>
-      <li><NuxtLink to="/components/ui/container-glow" class="link-normal">Glowing Cards</NuxtLink></li>
-    </ul>
     <slot name="content"></slot>
   </div>
 </template>

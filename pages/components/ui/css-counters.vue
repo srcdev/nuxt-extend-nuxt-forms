@@ -6,6 +6,9 @@
           <h2 class="heading-2">CSS Counters Test</h2>
         </LayoutRow>
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['css-counters-wrapper', 'mbe-20']">
+          <p class="body-normal">Test of CSS variables through various display types.</p>
+          <p><samp>counter-reset: circle-counter;</samp> is set here in parent conatiner.</p>
+          <p class="body-normal-semibold">Following block is <samp>display: grid;</samp></p>
           <div class="grid-row">
             <div class="item-row">
               <span class="counter-circle"></span>
@@ -17,6 +20,7 @@
             </div>
           </div>
 
+          <p class="body-normal-semibold">Following block is <samp>display: grid;</samp></p>
           <div class="grid-row">
             <div class="item-row">
               <span class="counter-circle"></span>
@@ -28,6 +32,7 @@
             </div>
           </div>
 
+          <p class="body-normal-semibold">Following block is <samp>display: flex;</samp></p>
           <div class="columns-row">
             <div class="item-row">
               <span class="counter-circle"></span>
@@ -39,6 +44,7 @@
             </div>
           </div>
 
+          <p class="body-normal-semibold">Following block is <samp>display: flex;</samp></p>
           <div class="flex-row">
             <div class="item-row">
               <span class="counter-circle"></span>

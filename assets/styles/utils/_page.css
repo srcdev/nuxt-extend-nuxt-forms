@@ -15,15 +15,7 @@ html {
 
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-body,
-p,
-pre,
-code,
-div,
-fieldset,
-legend,
-li,
-a {
+body {
   color: var(--grayscale-text-body);
   font-family: var(--font-family);
   font-size: var(--step-1);

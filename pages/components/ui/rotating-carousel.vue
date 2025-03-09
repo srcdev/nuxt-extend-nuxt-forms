@@ -3,7 +3,9 @@
     <NuxtLayout name="default">
       <template #content>
         <LayoutRow tag="div" variant="full" :styleClassPassthrough="['mbe-20']">
-          <h2 class="heading-2">Rotating Carousel</h2>
+          <h2 class="heading-2">Rotating Carousel (WIP)</h2>
+          <p class="body-normal">Settings can be updated for device testing below.</p>
+
           <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
             <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
               <label for="rotateX">rotateX</label>
@@ -25,10 +27,46 @@
               <input type="checkbox" v-model="pauseOnHover" id="pauseOnHover" />
               <span>{{ pauseOnHover }}</span>
             </div>
+            <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
+              <label for="useParallaxEffect">useParallaxEffect</label>
+              <input type="checkbox" v-model="useParallaxEffect" id="useParallaxEffect" />
+              <span>{{ useParallaxEffect }}</span>
+            </div>
           </div>
         </LayoutRow>
-        <LayoutRow tag="div" variant="full" :styleClassPassthrough="['mbe-20']">
-          <RotatingCarouselImage :data :rotateX="Number(rotateX)" :perspective="Number(perspective)" :translateZ="Number(translateZ)" :pauseOnHover />
+
+        <LayoutRow tag="div" variant="full" :styleClassPassthrough="['mbe-20']" style="margin-block: 300px">
+          <RotatingCarouselImage :data :rotateX="Number(rotateX)" :perspective="Number(perspective)" :translateZ="Number(translateZ)" :pauseOnHover :useParallaxEffect />
+        </LayoutRow>
+
+        <LayoutRow tag="div" variant="full" :styleClassPassthrough="['mbe-20']" style="margin-block-end: 600px">
+          <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
+            <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
+              <label for="rotateX">rotateX</label>
+              <input type="range" min="-20" max="20" step="1" v-model="rotateX" id="rotateX" />
+              <span>{{ rotateX }}deg</span>
+            </div>
+            <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
+              <label for="perspective">perspective</label>
+              <input type="range" min="600" max="1500" step="50" v-model="perspective" id="perspective" />
+              <span>{{ perspective }}px</span>
+            </div>
+            <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
+              <label for="translateZ">translateZ</label>
+              <input type="range" min="350" max="900" step="10" v-model="translateZ" id="translateZ" />
+              <span>{{ translateZ }}px</span>
+            </div>
+            <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
+              <label for="pauseOnHover">pauseOnHover</label>
+              <input type="checkbox" v-model="pauseOnHover" id="pauseOnHover" />
+              <span>{{ pauseOnHover }}</span>
+            </div>
+            <div class="display-flex mbe-12" align-content="center-center" gap="12px" flex-wrap="wrap">
+              <label for="useParallaxEffect">useParallaxEffect</label>
+              <input type="checkbox" v-model="useParallaxEffect" id="useParallaxEffect" />
+              <span>{{ useParallaxEffect }}</span>
+            </div>
+          </div>
         </LayoutRow>
       </template>
     </NuxtLayout>
@@ -57,6 +95,7 @@ const perspective = ref<number>(1000);
 const rotateX = ref<number>(-13);
 const translateZ = ref<number>(550);
 const pauseOnHover = ref<boolean>(false);
+const useParallaxEffect = ref<boolean>(true);
 
 interface IAccordianData {
   src: string;
