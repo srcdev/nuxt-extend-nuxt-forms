@@ -4,8 +4,13 @@
       <template #content>
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
           <h2 class="heading-2">Popover</h2>
+          <ClientOnly>
+            <p class="body-normal">
+              "anchorName" Supported <span class="body-normal-semibold">{{ anchorNameSupported }}</span>
+            </p>
+          </ClientOnly>
           <p class="body-normal">
-            "anchorName" Supported <span class="body-normal-semibold">{{ anchorNameSupported }}</span>
+            If anchorName is supported, the popover below will display to right of the green image, if it cannot fit in the view port, it will fallback to positioning left of green image
           </p>
           <div style="text-align: left">
             <h1>PopOver component left</h1>
@@ -14,7 +19,7 @@
                 <img class="profile-image" src="https://ui-avatars.com/api/name=1?background=0A8A0A&color=fff" alt="" />
               </template>
               <template #popoverCotent>
-                <h2>Popover content left</h2>
+                <h2>Popover content</h2>
               </template>
             </PopOver>
           </div>
@@ -27,7 +32,7 @@
                 <img class="profile-image" src="https://ui-avatars.com/api/name=2?background=0A8A0A&color=fff" alt="" />
               </template>
               <template #popoverCotent>
-                <h2>Popover content centre</h2>
+                <h2>Popover content</h2>
               </template>
             </PopOver>
           </div>
@@ -40,7 +45,7 @@
                 <img class="profile-image" src="https://ui-avatars.com/api/name=2?background=0A8A0A&color=fff" alt="" />
               </template>
               <template #popoverCotent>
-                <h2>Popover content right</h2>
+                <h2>Popover content</h2>
               </template>
             </PopOver>
           </div>
@@ -50,6 +55,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { ClientOnly } from '#components';
+
 definePageMeta({
   layout: false,
 });
@@ -68,7 +75,7 @@ useHead({
 });
 
 const anchorNameSupported = computed(() => {
-  return import.meta.client && !('anchorName' in document.documentElement.style);
+  return 'anchorName' in document.documentElement.style;
 });
 </script>
 
