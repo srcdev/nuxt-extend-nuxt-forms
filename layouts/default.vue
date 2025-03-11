@@ -1,8 +1,11 @@
 <template>
   <div class="page-layout">
     <TopNav />
-    <p class="mi-12 body-normal-semibold">Top Nav currently only displays correctly in Chromium desktop</p>
-    <p class="mi-12 body-normal">Top Nav currently uses the <samp>position-anchor</samp> property which is recognized as an experimental technology.</p>
+
+    <p class="mi-12 body-normal-semibold">Top Nav currently BETA</p>
+
+    <!-- <p class="mi-12 body-normal-semibold">Top Nav currently only displays correctly in Chromium desktop</p>
+    <p class="mi-12 body-normal">Top Nav currently uses the <samp>position-anchor</samp> property which is recognized as an experimental technology.</p> -->
 
     <slot name="content"></slot>
   </div>

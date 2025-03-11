@@ -1,6 +1,6 @@
 <template>
   <nav class="top-nav">
-    <DeepExpandingMenu :navLinks :styleClassPassthrough="['nav']" />
+    <DeepExpandingMenuOld :navLinks :styleClassPassthrough="['nav']" />
   </nav>
 </template>
 
