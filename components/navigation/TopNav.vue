@@ -54,6 +54,7 @@ const navLinks = <INavLink[]>[
 .top-nav {
   display: flex;
   align-items: center;
+  z-index: 10;
 
   .nav {
     display: flex;
