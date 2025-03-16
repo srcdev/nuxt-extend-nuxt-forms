@@ -44,6 +44,19 @@
             </li>
           </ul>
 
+          <p>Select type of text input to display</p>
+          <ul class="flex-group">
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="inputVariant = 'normal'" button-text="Normal" theme="primary" size="normal" />
+            </li>
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="inputVariant = 'outlined'" button-text="Outlined" theme="primary" size="normal" />
+            </li>
+            <li>
+              <InputButtonSubmit type="button" @click.stop.prevent="inputVariant = 'underlined'" button-text="Underlined" theme="primary" size="normal" />
+            </li>
+          </ul>
+
           <ClientOnly>
             <FormWrapper width="medium">
               <template #default>
@@ -66,7 +79,7 @@
                         :styleClassPassthrough="['style-1', 'style-2']"
                         :theme
                         :size
-                        :isMaterial="true"
+                        :inputVariant
                       >
                         <template #description>
                           <p class="body-normal">This is a description for username field</p>
@@ -94,6 +107,7 @@
                         :styleClassPassthrough="['style-1', 'style-2']"
                         :theme
                         :size
+                        :inputVariant
                       >
                         <template #left>
                           <Icon name="radix-icons:person" class="icon" />
@@ -117,6 +131,7 @@
                         :styleClassPassthrough="['style-1', 'style-2']"
                         :theme
                         :size
+                        :inputVariant
                       >
                         <template #right>
                           <Icon name="radix-icons:eye-open" class="icon" />
@@ -163,6 +178,7 @@
                         :styleClassPassthrough="['style-1', 'style-2']"
                         :theme
                         :size
+                        inputVariant="normal"
                       >
                         <template #description>
                           <p class="label-description">Input type="text" inputmode="numeric"</p>
@@ -554,6 +570,7 @@ useHead({
   },
 });
 
+const inputVariant = ref('normal');
 const theme = ref('primary');
 const size = ref<'x-small' | 'small' | 'normal' | 'medium' | 'large'>('normal');
 const swapTheme = (newTheme: string) => {
