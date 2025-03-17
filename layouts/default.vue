@@ -11,6 +11,31 @@
   </div>
 </template>
 
+<script type="module" lang="ts">
+// declare global {
+//   interface Window {
+//     ANCHOR_POSITIONING_POLYFILL_OPTIONS?: {
+//       elements?: any;
+//       excludeInlineStyles?: boolean;
+//       useAnimationFrame?: boolean;
+//     };
+//   }
+// }
+
+// if (import.meta.client) {
+//   (async () => {
+//     if (!('anchorName' in document.documentElement.style)) {
+//       window.ANCHOR_POSITIONING_POLYFILL_OPTIONS = {
+//         elements: undefined,
+//         excludeInlineStyles: false,
+//         useAnimationFrame: false,
+//       };
+//       await import('@oddbird/css-anchor-positioning');
+//     }
+//   })();
+// }
+</script>
+
 <script setup lang="ts">
 useHead({
   bodyAttrs: {

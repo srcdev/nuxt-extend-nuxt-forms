@@ -1,7 +1,23 @@
 <template>
   <nav class="top-nav">
-    <DeepExpandingMenuOld :navLinks :styleClassPassthrough="['nav']" />
+    <component :is="menuCoponentnName" :navLinks :styleClassPassthrough="['nav']" />
   </nav>
+
+  <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+    <FormField width="wide" :has-gutter="false">
+      <template #default>
+        <ToggleSwitchWithLabel v-model="toggleBoolean" id="toggleBoolean" name="toggleBoolean" label="Toggle Modern Css Menu">
+          <template #description>
+            <p v-if="toggleBoolean" class="label-description">Current displaying modern CSS menu</p>
+            <p v-else class="label-description">Current displaying legacy menu</p>
+          </template>
+        </ToggleSwitchWithLabel>
+      </template>
+    </FormField>
+
+    <p v-if="modernMenuSupported" class="label-description">Modern CSS menu IS supported in your browser</p>
+    <p v-else class="label-description">Modern CSS menu NOT supported in your browser</p>
+  </LayoutRow>
 </template>
 
 <script setup lang="ts">
@@ -49,6 +65,20 @@ const navLinks = <INavLink[]>[
     ],
   },
 ];
+
+const toggleBoolean = ref<boolean>(false);
+
+const modernMenuSupported = computed<boolean>(() => {
+  if (import.meta.client) {
+    return 'anchorName' in document.documentElement.style;
+  }
+  return false;
+});
+
+const DeepExpandingMenu = defineAsyncComponent(() => import('../../node_modules/srcdev-nuxt-components/components/deep-expanding-menu/DeepExpandingMenu.vue'));
+const DeepExpandingMenuOld = defineAsyncComponent(() => import('../../node_modules/srcdev-nuxt-components/components/deep-expanding-menu/DeepExpandingMenuOld.vue'));
+
+const menuCoponentnName = computed(() => (toggleBoolean.value ? DeepExpandingMenu : DeepExpandingMenuOld));
 </script>
 <style lang="css">
 .top-nav {
