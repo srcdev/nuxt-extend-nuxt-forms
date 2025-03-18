@@ -15,8 +15,10 @@
       </template>
     </FormField>
 
-    <p v-if="modernMenuSupported" class="label-description">Modern CSS menu IS supported in your browser</p>
-    <p v-else class="label-description">Modern CSS menu NOT supported in your browser</p>
+    <ClientOnly>
+      <p v-if="modernMenuSupported" class="label-description">Modern CSS menu IS supported in your browser</p>
+      <p v-else class="label-description">Modern CSS menu NOT supported in your browser</p>
+    </ClientOnly>
   </LayoutRow>
 </template>
 

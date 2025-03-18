@@ -34,6 +34,6 @@ export default defineNuxtConfig({
     dirs: ['./stores'],
   },
   css: ['modern-normalize', './assets/styles/main.css'],
-  modules: ['@nuxt/icon', '@pinia/nuxt', '@nuxtjs/storybook', '@nuxt/image'],
+  modules: ['@nuxt/icon', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxtjs/storybook', '@nuxt/image'],
   extends: ['srcdev-nuxt-forms', 'srcdev-nuxt-components'],
 });
