@@ -11,18 +11,16 @@ const config: StorybookConfig = {
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
 
-    // Filter out specific warnings
-    const originalHandler = config.customLogger?.error;
-    config.customLogger = {
-      ...config.customLogger,
-      error: (msg) => {
-        // Skip the specific virtual module warning
-        if (msg.includes(`Failed to resolve "\u0000/virtual:/@storybook/builder-vite/storybook-stories.js"`)) {
-          return;
-        }
-        originalHandler?.(msg);
-      },
-    };
+    // const originalHandler = config.customLogger?.error;
+    // config.customLogger = {
+    //   ...config.customLogger,
+    //   error: (msg) => {
+    //     if (msg.includes(`Failed to resolve "\u0000/virtual:/@storybook/builder-vite/storybook-stories.js"`)) {
+    //       return;
+    //     }
+    //     originalHandler?.(msg);
+    //   },
+    // };
 
     return mergeConfig(config, {
       server: {

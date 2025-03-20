@@ -45,6 +45,8 @@ const navLinks = <INavLink[]>[
       { name: 'Grid Header Align Height', path: '/aligned-headers' },
       { name: 'Rotating Carousel', path: '/components/ui/rotating-carousel' },
       { name: 'Glowing Cards', path: '/components/ui/container-glow' },
+      { name: 'Accordian', path: '/components/ui/accordian' },
+      { name: 'Details', path: '/components/ui/display-details' },
     ],
   },
   {
@@ -55,7 +57,6 @@ const navLinks = <INavLink[]>[
       { name: 'Layout Grid A', path: '/components/ui/layout-grid-a' },
       { name: 'Layout Grid B', path: '/components/ui/layout-grid-b' },
       { name: 'Simple Grid', path: '/components/ui/simple-grid' },
-      { name: 'Accordian', path: '/components/ui/accordian' },
       { name: 'Tabs X', path: '/components/ui/tabs' },
       { name: 'Tabs Y', path: '/components/ui/tabs-y' },
       { name: 'Prompts', path: '/components/ui/display-prompt' },
