@@ -155,6 +155,7 @@
                         :styleClassPassthrough="['style-1', 'style-2']"
                         :theme
                         :size
+                        :inputVariant
                       >
                       </InputTextareaWithLabel>
                     </template>
