@@ -43,7 +43,7 @@
           </DisplayDetailsCore>
         </LayoutRow>
 
-        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['display-details-section', 'mbe-20', 'hidden']">
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['display-details-section', 'mbe-20']">
           <h2 class="heading-2">Details element - Linked</h2>
           <p class="mbe-12">Details panels are linked, only 1 can be open at a time.</p>
 
@@ -65,7 +65,7 @@
             </template>
           </DisplayDetailsCore>
 
-          <DisplayDetailsCore name="details-inked" :id="useId()" iconSize="medium" :styleClassPassthrough="['linked']">
+          <DisplayDetailsCore name="details-linked" :id="useId()" iconSize="medium" :styleClassPassthrough="['linked']">
             <template #summary>
               <h3 class="heading-3 m-8">Details header 2</h3>
             </template>
