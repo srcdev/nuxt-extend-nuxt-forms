@@ -43,8 +43,8 @@
     "eslint-plugin-storybook": "0.11.6",
     "happy-dom": "16.8.1",
     "http-proxy-middleware": "3.0.3",
-    "srcdev-nuxt-components": "2.1.11",
-    "srcdev-nuxt-forms": "2.4.20",
+    "srcdev-nuxt-components": "2.1.12",
+    "srcdev-nuxt-forms": "2.4.21",
     "storybook": "8.4.7",
     "vitest": "3.0.9",
     "vue-router": "4.5.0"

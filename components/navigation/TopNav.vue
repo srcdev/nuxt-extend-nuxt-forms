@@ -53,6 +53,7 @@ const navLinks = <INavLink[]>[
     name: 'Layout',
     childLinksTitle: 'Layout Components',
     childLinks: [
+      { name: 'Animated SVG Text', path: '/components/ui/animated-svg-text' },
       { name: 'Layout Row', path: '/components/ui/layout-row' },
       { name: 'Layout Grid A', path: '/components/ui/layout-grid-a' },
       { name: 'Layout Grid B', path: '/components/ui/layout-grid-b' },
