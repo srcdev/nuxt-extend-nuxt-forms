@@ -2,6 +2,13 @@
   <div>
     <NuxtLayout name="default">
       <template #content>
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <h1 class="header-1">Colour Mode Switcher</h1>
+          <div class="m-12">
+            <ColourSchemeSelect :style-class-passthrough="['m-24']" />
+          </div>
+        </LayoutRow>
+
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['display-details-section', 'mbe-20']">
           <h2 class="heading-2">Animated SVG Text Component</h2>
 
