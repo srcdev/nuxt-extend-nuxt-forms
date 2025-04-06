@@ -567,7 +567,7 @@ useHead({
     },
   ],
   bodyAttrs: {
-    class: 'home',
+    class: 'sample-form',
   },
 });
 
@@ -778,5 +778,33 @@ ul.flex-group {
 .header-1 {
   font-family: var(--font-family);
   color: var(--brand-success-text-text);
+}
+
+.sample-form {
+  .toggle-switch-core {
+    .toggle-switch-wrapper {
+      --theme-form-toggle-border-color: var(--blue-12);
+      --theme-form-toggle-border-width: 0.1rem;
+      --theme-form-toggle-outline-color: var(--gray-2);
+      --theme-form-toggle-outline-width: 0.1rem;
+
+      --_transition-duration: 0.4s;
+      --_switch-padding: 0.2rem;
+      --_icon-color: inherit;
+      --_icon-on-opacity: 0;
+      --_icon-off-opacity: 1;
+      --_icon-font-size: 2.4rem;
+      --_symbol-size: 3.4rem;
+      --_symbol-background-color: var(--blue-6);
+      --_symbol-outline-color: transparent;
+      --_symbol-outline-width: 1px;
+      --_symbol-margin-inline-start: 0;
+      --_symbol-checked-offset: calc(var(--_symbol-size) * 0.75);
+
+      &.use-default-icons {
+        --_icon-color: transparent;
+      }
+    }
+  }
 }
 </style>
