@@ -9,7 +9,7 @@
             <div class="col 1">
               <Icon name="radix-icons:envelope-closed" class="icon" />
               <h3 class="heading-3">This is header text</h3>
-              <p>This is body class="body-normal"copy for testing purposes, should have just done some Lorum Ipsum really</p>
+              <p class="body-normal">This is body copy for testing purposes, should have just done some Lorum Ipsum really</p>
             </div>
             <div class="col 2">
               <Icon name="radix-icons:envelope-closed" class="icon" />
