@@ -10,6 +10,11 @@
         </LayoutRow>
 
         <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
+          <h1 class="header-1">Test Link to an external local dev</h1>
+          <NuxtLink to="https://neighbourly.dev.local/auth-true" target="_blank">Auth true</NuxtLink>
+        </LayoutRow>
+
+        <LayoutRow tag="div" variant="full-width" :styleClassPassthrough="['mbe-20']">
           <h1 class="header-1">Test Icon</h1>
           <TestIcon />
         </LayoutRow>
