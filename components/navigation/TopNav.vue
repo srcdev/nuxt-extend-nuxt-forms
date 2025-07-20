@@ -44,6 +44,7 @@ const navLinks = <INavLink[]>[
       { name: 'Limit Text Rows', path: '/limit-text-rows' },
       { name: 'Grid Header Align Height', path: '/aligned-headers' },
       { name: 'Rotating Carousel', path: '/components/ui/rotating-carousel' },
+      { name: 'Carosuel Flip (Infinite)', path: '/components/ui/carousel-flip' },
       { name: 'Glowing Cards', path: '/components/ui/container-glow' },
       { name: 'Accordian', path: '/components/ui/accordian' },
       { name: 'Details', path: '/components/ui/display-details' },
