@@ -12,7 +12,7 @@
             :carousel-data-ids
             :allow-carousel-overflow="true"
             :transition-speed="500"
-            :use-flip-animation="false"
+            :use-flip-animation="true"
             :style-class-passthrough="['carousel-flip-demo', 'mbe-20']"
           >
             <template v-for="(item, index) in carouselData?.items" #[item.id]>
